@@ -1,0 +1,13 @@
+# Brief asset
+- Nom :
+- Zone : (canon confirmé / non documentée / proposition)
+- Type : bâtiment / prop / rue / véhicule / autre
+- Fonction gameplay :
+- Distance caméra / vue :
+- Dimensions / unités :
+- Références validées :
+- Marqueur de silhouette distinctif :
+- Matériaux dominants :
+- Contraintes techniques :
+- Phase demandée : 1 / 2 / 3
+- Hypothèses à valider :
