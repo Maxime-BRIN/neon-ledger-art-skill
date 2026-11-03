@@ -11,6 +11,7 @@ Objectif : produire des visuels distinctifs et des assets techniquement exploita
 1. Lire `references/NEON_LEDGER_ART_BIBLE.md`.
 2. Lire `references/ZONES.md` pour la zone demandée, s'il existe un profil.
 3. Lire `references/PHASES.md` uniquement pour la phase actuelle.
+4. Pour toute demande de création, d'adaptation ou de sélection d'un asset 3D, lire d'abord `references/ASSET_SOURCING.md` ; rechercher avant de créer.
 4. Pour une étape de validation, lire `references/QUALITY_GATES.md`.
 5. Utiliser les modèles de `templates/` si le brief ou le rapport est absent.
 
@@ -25,11 +26,20 @@ Identifier : **type d'asset, zone, usage gameplay, échelle/dimensions, distance
 - Prioriser **une sortie visuelle principale** par itération ; produire planches techniques et variantes après validation si elles sont utiles au type d'asset.
 - Corriger les **3 défauts majeurs** plutôt que réécrire tout le prompt.
 
+## Recherche et réutilisation avant génération — étape 0 obligatoire
+Pour tout asset 3D, appliquer `references/ASSET_SOURCING.md` **avant** le routage des images : (1) rechercher les assets déjà présents dans le projet et le catalogue Notion, (2) chercher des modèles externes gratuits réellement téléchargeables, (3) vérifier l'adéquation artistique/technique **et la licence de la fiche précise**, (4) comparer réutilisation, adaptation et création.
+- Un asset déjà adapté et exploitable est à **réutiliser**, pas à recréer. Un asset proche est à **adapter**, si l'effort est raisonnable ; sinon proposer la création.
+- Prioriser la qualité finale, le coût d'intégration et la traçabilité ; « gratuit », « CC0 » ou « libre de droits » ne se déduisent pas d'un site entier. Vérifier le droit d'usage commercial, de modification, les attributions et les restrictions de redistribution pour l'asset concerné. Sans preuve, ne pas annoncer « licence vérifiée » et ne pas incorporer le fichier.
+- Pour un lot, garder une liste courte de candidats par asset, sans téléchargement massif ni doublons. Respecter l'accord de l'utilisateur avant toute acquisition/import qui écrit dans le projet.
+- Si la recherche externe n'est pas disponible, consigner **NOT_TESTED**, ne pas prétendre avoir cherché et proposer une décision provisoire.
+- **Ne déclencher la création de concept IA que pour la voie CRÉER validée**, jamais simplement parce qu'il manque une image. Une image utilisateur utile peut aider à choisir ou à adapter un asset existant, sans imposer une reconstruction.
+- Les assets réutilisés ou adaptés passent les contrôles artistiques, techniques et de licences pertinents. Conserver les validations humaines et la synchronisation Notion.
+
 ## Routage obligatoire des références — avant la phase 1
-Déterminer pour **chaque asset**, avant tout concept ou modélisation, si une référence visuelle pertinente est fournie (image jointe, image de projet ou concept déjà approuvé), si l'agent dispose **réellement** d'un outil de génération d'images, et si le brief textuel est suffisamment précis. Une image générique d'ambiance n'est pas automatiquement une référence d'asset.
+**Après le choix documenté RÉUTILISER / ADAPTER / CRÉER**, déterminer pour **chaque asset**, avant tout concept ou modélisation, si une référence visuelle pertinente est fournie (image jointe, image de projet ou concept déjà approuvé), si l'agent dispose **réellement** d'un outil de génération d'images, et si le brief textuel est suffisamment précis. Une image générique d'ambiance n'est pas automatiquement une référence d'asset.
 1. **Image pertinente fournie** : l'utiliser prioritairement, sans la remplacer ni régénérer par défaut. Identifier ses éléments visibles, son statut (proposée/approuvée) et ses limites. Si la référence est ambiguë, proposer une interprétation et solliciter validation ; ne pas traiter une image non approuvée comme canon.
-2. **Aucune image pertinente + génération d'images disponible** : commencer obligatoirement la **phase 1 par un concept visuel généré**, adapté à l'objet (pour un prop : objet isolé lisible, silhouette, matériaux, détails fonctionnels ; pour une scène : cadrage pertinent). S'appuyer sur le brief et la DA documentée, **une image principale par asset/itération**, sans générer des dizaines de variantes. Présenter ce concept comme proposition et attendre son approbation explicite avant la phase 2.
-3. **Aucune image pertinente + pas de génération d'images disponible** : poursuivre avec une **référence textuelle structurée** ; si la description utilisateur est déjà précise, la conserver et la compléter seulement sur les points de fabrication manquants. Si elle est vague, **proposer une version textuelle plus complète** (fonction, zone, silhouette, proportions, dimensions estimées, construction, matériaux, couleurs motivées, vieillissement, habillage, fixations, lisibilité à distance de jeu, limites et hypothèses), clairement étiquetée `PROPOSITION À VALIDER`. Ne pas inventer d'image ni affirmer en avoir généré. Demander approbation de cette référence textuelle avant la phase 2.
+2. **Voie CRÉER validée, aucune image pertinente + génération d'images disponible** : commencer obligatoirement la **phase 1 par un concept visuel généré**, adapté à l'objet (pour un prop : objet isolé lisible, silhouette, matériaux, détails fonctionnels ; pour une scène : cadrage pertinent). S'appuyer sur le brief et la DA documentée, **une image principale par asset/itération**, sans générer des dizaines de variantes. Présenter ce concept comme proposition et attendre son approbation explicite avant la phase 2.
+3. **Voie CRÉER validée, aucune image pertinente + pas de génération d'images disponible** : poursuivre avec une **référence textuelle structurée** ; si la description utilisateur est déjà précise, la conserver et la compléter seulement sur les points de fabrication manquants. Si elle est vague, **proposer une version textuelle plus complète** (fonction, zone, silhouette, proportions, dimensions estimées, construction, matériaux, couleurs motivées, vieillissement, habillage, fixations, lisibilité à distance de jeu, limites et hypothèses), clairement étiquetée `PROPOSITION À VALIDER`. Ne pas inventer d'image ni affirmer en avoir généré. Demander approbation de cette référence textuelle avant la phase 2.
 - **L'image n'est pas obligatoire si l'outil est absent** : une spécification textuelle approuvée vaut référence principale pour les gates, à condition de détailler les éléments contrôlables ; comparer alors le vrai rendu à cette liste de critères plutôt que prétendre produire un côte-à-côte visuel impossible.
 - Si l'utilisateur demande explicitement de **ne pas générer d'image**, respecter ce choix et utiliser la voie textuelle.
 - Pour un lot, traiter les assets individuellement et limiter les générations aux éléments nécessaires ; préserver les concepts existants déjà validés.
@@ -42,7 +52,8 @@ Déterminer pour **chaque asset**, avant tout concept ou modélisation, si une r
 - Préférer des graffitis abstraits ou illisibles ; ne pas inventer de texte lisible ni de marque non validée.
 
 ## Production par jalons
-- Phase 1 : concept et spécification visuelle ; **aucun faux modèle 3D**.
+- Étape 0 : diagnostic réutiliser / adapter / créer et vérification de licence ; aucune génération d'image inutile.
+- Phase 1 : concept et spécification visuelle **pour la création originale** ; en réutilisation/adaptation, revue et approbation de la source et des modifications prévues ; **aucun faux modèle 3D**.
 - Phase 2 : modélisation 3D, UV, pivots, unités, modules éventuels, collisions éventuelles ; produire des preuves réellement rendues.
 - Phase 3 : matériaux PBR, vieillissement motivé, éclairage, export, contrôles Godot 4.
 - **Validation explicite requise** avant de passer à la phase suivante.
