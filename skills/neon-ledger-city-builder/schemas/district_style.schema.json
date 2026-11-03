@@ -1,0 +1,5 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","title":"Neon Ledger Local Style Guide","type":"object","additionalProperties":false,
+ "required":["schema_version","district_id","style_name","art_direction","materials","lighting","architecture","density","storytelling"],
+ "properties":{"schema_version":{"const":"1.0"},"district_id":{"type":"string"},"style_name":{"type":"string"},"art_direction":{"type":"string"},"materials":{"type":"array","items":{"type":"string"}},"lighting":{"type":"string"},"architecture":{"type":"string"},"density":{"type":"string"},"storytelling":{"type":"string"},"transition_notes":{"type":"string"}}
+}
