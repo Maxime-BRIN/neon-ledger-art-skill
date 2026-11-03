@@ -3,7 +3,7 @@ name: neon-ledger-city-builder
 description: "Workflow unique pour cadrer, planifier, étendre, construire et habiller des zones urbaines de Neon Ledger sous Godot 4. Utiliser pour toute demande de création/extension de quartier, masterplan, SVG métrique, greybox, set dressing ou validation de zone. Exige des validations humaines aux jalons, protège les zones existantes et privilégie une source JSON canonique."
 ---
 
-# Neon Ledger — City Builder
+# Neon Ledger — City Builder (V0.2)
 
 ## Mission
 
@@ -34,8 +34,8 @@ Si ces sources se contredisent, **arrêter les opérations concernées**, expose
 | 0 — Cadrage | Cahier des charges avec contraintes imposées, hypothèses et propositions par défaut; géographie et intentions | **APPROUVER_CADRAGE** |
 | 1 — Masterplan | Modèle JSON canonique, **SVG lisible dérivé du JSON**, audit des raccords/flux/emprises, rapport | **APPROUVER_MASTERPLAN** |
 | 2 — Greybox | Volumes Godot fidèles, mesures de scènes, tests de navigation avec personnage et caméra réels, captures | **APPROUVER_GREYBOX** |
-| 3 — Direction artistique et assets | Guide d'ambiance local, plan d'habillage, inventaire, besoins et licences vérifiées | **APPROUVER_DA_ASSETS** |
-| 4 — Habillage et vérification | Placement d'assets, éclairage, vues TPP, validation technique et artistique, corrections locales | **APPROUVER_HABILLAGE** |
+| 3 — Direction artistique et assets | Guide local, références étudiées, hero views initiales, **audit de couverture et d'adéquation des assets par sous-zone** (FIT/ADAPT/REJECT/MISSING), sourcing proposé ou manques bloquants | **APPROUVER_DA_ASSETS** si couverture des besoins essentiels acceptable |
+| 4 — Habillage et vérification | Placement **par sous-zone et par couches**, micro-scènes justifiées, **comparatifs avant/après aux mêmes caméras TPP**, itérations et suivi des défauts BLOCKER/MAJOR/MINOR | **APPROUVER_HABILLAGE** après gate visuel documenté |
 | 5 — Gel | Finaliser index, version, preuve et état `locked`; publier le bilan | Validation de phase 4 requise; le gel ne peut être auto-approuvé |
 
 L'agent peut travailler, vérifier et corriger **à l'intérieur de la phase autorisée**, sans franchir un jalon. Un silence, une absence de réponse ou une validation d'une autre phase **ne vaut jamais approbation**. Si le dialogue se coupe, reprendre au dernier jalon humain enregistré, pas plus loin. Les approbations ne sont pas des mécanismes de sécurité informatique : la protection requiert aussi revue de diff, permissions et Git.
@@ -66,9 +66,9 @@ L'agent peut travailler, vérifier et corriger **à l'intérieur de la phase aut
 
 - Respecter Godot 4: **X/Z horizontal, Y vertical, 1 unité = 1 mètre**, sans réinterprétation des axes.
 - Mesurer positions, tailles et collisions des instances **réellement chargées**. Exécuter des tests de navigation avec capsule/caméra existantes; une droite entre deux points n'est pas un test de parcours. Fournir des captures TPP et orthographiques réelles, ou dire explicitement qu'elles n'ont pas pu être produites.
-- L'habillage doit raconter un usage plausible, et non disperser des props arbitraires; conserver lignes de vue, accès, dégagements et budget GPU. Le style vient de la fiche DA **approuvée du quartier**, pas d'une recette cyberpunk universelle.
-- Pour les assets, réutiliser les modèles locaux; chercher si nécessaire des assets gratuits avec **licences et provenances vérifiées**; ne télécharger/intégrer des éléments externes ou écrire dans Notion que lorsque l'autorisation correspondante a été accordée. Tenir la liste « existants / nouveaux + source/licence / manquants ».
-- Si un asset sur mesure est justifié, **proposer** `neon-ledger-art-skill` avec une mini-spécification; **ne jamais le déclencher automatiquement**. Voir `references/ASSETS_NOTION.md`.
+- L'habillage doit raconter un usage plausible, et non disperser des props arbitraires; conserver lignes de vue, accès, dégagements et budget GPU. Le style vient de la fiche DA **approuvée du quartier**, pas d'une recette cyberpunk universelle.\n- **Gate V0.2 avant placement :** inspecter les références et captures de départ, décomposer les façades/sols/toitures par fonction, identifier 3–5 vues héroïques adaptées, remplir la matrice Asset Fit `FIT/ADAPT/REJECT/MISSING/PLACEHOLDER`, calculer la couverture des besoins prioritaires et signaler les manques bloquants. **Un asset existant mais inadapté doit être rejeté, jamais répété pour remplir l'espace.** Voir `references/SET_DRESSING.md`.\n- **Gate V0.2 après placement :** preuves des couches appliquées ou justifiées N/A pour chaque sous-zone, micro-scènes d'usage plausibles, captures comparables avant/après, défauts classés et corrections itératives. **Aucune validation finale en présence de BLOCKER, et pas de MAJOR caché.** Une scène inachevée peut être présentée comme prototype partiel, jamais comme rendu final. Utiliser `templates/dressing-report.md`.
+- Pour les assets, **réutiliser uniquement les candidats réellement adaptés**; si une catégorie essentielle manque, proposer une recherche d'alternatives gratuites (source/licence vérifiées), une adaptation ou la création sur mesure. **Sourcing à proposer et réaliser avec des outils disponibles**; téléchargements, intégrations et écritures Notion nécessitent les autorisations correspondantes. Tenir les listes « retenus / rejetés / nouveaux / manquants » et leurs preuves.
+- Si un asset sur mesure est justifié, **proposer** `neon-ledger-environment` (répertoire `skills/neon-ledger-environment` de la bibliothèque) avec une mini-spécification; **ne jamais le déclencher automatiquement**. Voir `references/ASSETS_NOTION.md`.
 
 ## Livrables et transparence à chaque jalon
 
@@ -89,7 +89,7 @@ Ces scripts valident une **partie des invariants géométriques**; ils ne rempla
 - `references/MASTERPLAN.md` — urbanisme, SVG et mesures.
 - `references/EXTENSIONS.md` — raccords, continuité, transitions.
 - `references/GODOT_GREYBOX.md` — Godot et contrôle de proportions.
-- `references/SET_DRESSING.md` — art direction et rendu.
+- `references/SET_DRESSING.md` — protocole V0.2 structure-aware, audit asset-fit, sous-zones et itérations visuelles.\n- `templates/dressing-report.md` — rapport de contrôle avant validation humaine.\n- `examples/weakland-dressing-audit.md` — analyse pédagogique du rendu Weakland et exemples de besoins.
 - `references/ASSETS_NOTION.md` — sourcing, licences, Notion, Skill art externe.
 - `references/QUALITY_GATES.md` — critères bloquants.
 - `references/PROTECTION.md` — verrouillage et changement minimal.
