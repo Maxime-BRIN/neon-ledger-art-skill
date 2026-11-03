@@ -1,4 +1,21 @@
-# Neon Ledger — Environment Art Skill
+# Neon Ledger — Bibliothèque de Skills IA
+
+Ce dépôt regroupe les Skills spécialisés du projet **Neon Ledger** pour Claude Code et Codex. Les Skills sont indépendants et utilisent des procédures à validation humaine.
+
+## Catalogue
+
+| Skill | Répertoire | Fonction |
+| --- | --- | --- |
+| **neon-ledger-environment** | [skills/neon-ledger-environment](skills/neon-ledger-environment/) | Conception et production d'assets 3D avec contrôle de la DA, Blender et intégration Godot |
+| **neon-ledger-city-builder** | [skills/neon-ledger-city-builder](skills/neon-ledger-city-builder/) | Cadrage urbain, masterplans JSON/SVG, extensions, greybox, habillage, protections et contrôles |
+
+## Installation
+
+Copier individuellement le dossier du Skill choisi dans `.agents/skills/` (Codex) ou `.claude/skills/` (Claude Code). Le dossier du Skill doit contenir son `SKILL.md` et ses ressources.
+
+Le **City Builder** peut recommander l'utilisation de **neon-ledger-environment** pour produire un modèle absent, mais **ne l'appelle pas automatiquement** : accord humain spécifique requis.
+
+## Documentation historique — Skill d'assets
 
 Skill réutilisable pour concevoir et produire **tout type d'asset** de Neon Ledger : architecture, rues, props, véhicules, intérieurs éventuels, signalétique et environnements.
 
