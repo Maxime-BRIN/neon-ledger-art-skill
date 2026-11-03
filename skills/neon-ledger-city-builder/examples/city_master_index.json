@@ -1,0 +1,6 @@
+{
+ "schema_version":"1.0","city_name":"Neon Ledger — DEMO FICTIVE",
+ "districts":[{"id":"DIST-900","name":"Démonstration"}],
+ "zones":[{"id":"ZONE-900","district_id":"DIST-900","name":"Cour des ateliers","masterplan":"zone_masterplan.json","style_guide":null,"status":"draft","approvals":[]}],
+ "retired_ids":[]
+}
