@@ -6,6 +6,13 @@
 - Data source observée le 2026-11-03 : `collection://2539d081-70cb-463a-b04e-7021ca993c8f`
 - **Toujours relire le schéma vivant avant modification** : noms et options peuvent évoluer.
 
+## Origine des assets récupérés ou adaptés
+- Renseigner le créateur original et la page de l'asset précis, ainsi que la chaîne de modifications éventuelles ; ne pas attribuer l'œuvre originale à l'IA.
+- Conserver la preuve de licence consultée, l'URL et la date de vérification ; noter les obligations d'attribution, la provenance des textures, les restrictions de redistribution et les modifications.
+- N'importer dans le dépôt public que les fichiers autorisés. La gratuité d'accès ne signifie pas permission de redistribution.
+- Ne cocher `Licence vérifiée` que lorsque la licence de **cet asset précis** et ses conditions sont documentées ; ne jamais supposer que toute une plateforme est CC0.
+- Pour un asset existant déjà enregistré, enrichir la fiche sans doublon. Si l'image preview de source est soumise à restrictions, privilégier un rendu propre autorisé.
+
 ## Algorithme idempotent
 1. Avant une création, rechercher dans la BDD les entrées correspondant à l'asset par **Nom**, chemin, source/lien et éventuel identifiant stable. Vérifier visuellement les homonymes.
 2. Mettre à jour l'entrée existante ; ne créer une fiche que si aucun asset correspondant n'existe.
