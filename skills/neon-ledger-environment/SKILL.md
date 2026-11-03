@@ -36,3 +36,14 @@ Identifier : **type d'asset, zone, usage gameplay, échelle/dimensions, distance
 
 ## Sortie courte
 Indiquer asset + zone + phase + hypothèses importantes. Livrer les fichiers, les preuves et un statut : PASS, BLOCKED ou NEEDS_USER_APPROVAL. Ne produire un long audit que si une anomalie le justifie.
+
+## Étape finale obligatoire — Image et catalogue Notion
+À la clôture de **chaque production d'asset** (concept approuvé, prototype ou asset final), suivre `references/NOTION_ASSET_CATALOG.md`.
+1. Produire ou sélectionner **une vraie image représentative de l'asset** ; privilégier un rendu du mesh réel dès qu'il existe. Ne pas présenter un concept IA comme une capture 3D.
+2. Créer ou **mettre à jour sans doublon** la fiche de cet asset dans la base officielle Notion « ⛩️ Assets Neon Ledger ».
+3. Renseigner les champs disponibles, notamment `Nom`, `Catégorie`, `Type`, `Usage`, `Chemin projet`, `Lien`, `Auteur`, `Statut`, `Contrôle technique`, `Décision / remarques` et les informations de licence vérifiables.
+4. **Renseigner la propriété fichier `Aperçu` avec l'image**, et conserver également une image visible dans le **contenu de la page** lorsque nécessaire pour la galerie configurée sur « Aperçu de la carte : Contenu ».
+5. Aucun `Statut = Intégré` sans test d'intégration Godot effectivement réalisé ; aucune `Licence vérifiée` sans preuve ; ne pas deviner les valeurs.
+6. Confirmer le lien de la fiche Notion et les champs réellement mis à jour. En cas d'absence d'accès Notion ou d'échec d'upload, signaler l'étape bloquée et garder les fichiers prêts, sans annoncer une synchronisation réussie.
+
+Cette synchronisation ne remplace pas la validation humaine entre phases. Une fiche peut exister dès la phase concept avec `Statut = Nouvel asset`, puis être enrichie aux phases suivantes.
