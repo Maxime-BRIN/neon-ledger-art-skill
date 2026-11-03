@@ -16,13 +16,13 @@ Analyser registre, zones voisines, topographie, route réseau, usage, échelle T
 
 L'approbation du masterplan est obligatoire. Ajouter uniquement la zone de travail, sans modifier les zones gelées. Vérifier scène réellement chargée, coordonnées, emprises, hauteurs, collisions, caméra joueur et plusieurs cheminements. Captures: orthographique, spawn, points de jonction, intersections, place/repère, sortie. Consigner les mesures, les tests non réalisés et leurs conséquences.
 
-## Phase 3 — DA et assets
+## Phase 3 — DA et assets (V0.2 : Asset Coverage & Fit Audit)
 
-Avec la greybox approuvée, recueillir si nécessaire les préférences artistiques non précisées; proposer des alternatives argumentées. Créer un style guide local, un plan d'habillage et un inventaire des assets (disponibles, gratuits à sourcer, uniques à créer), plus licence, budget de détails et plan de visibilité. Validation spécifique des téléchargements / écritures externes. La liste d'assets est un plan avant le placement.
+Avec la greybox approuvée, recueillir si nécessaire les préférences artistiques non précisées; proposer des alternatives argumentées. Créer un style guide local, un plan d'habillage et un inventaire des assets (disponibles, gratuits à sourcer, uniques à créer), plus licence, budget de détails et plan de visibilité. Validation spécifique des téléchargements / écritures externes. **Bloquant :** décomposer la zone en sous-zones fonctionnelles et étudier les références. Pour chaque besoin prioritaire, enregistrer FIT/ADAPT/REJECT/MISSING/PLACEHOLDER avec raison et couverture. Chercher activement des alternatives gratuites si les modèles locaux sont inadaptés, ou proposer la création via neon-ledger-environment sans l'exécuter automatiquement. Manques essentiels non résolus = demander un arbitrage avant habillage. La liste d'assets est un plan avant le placement. Voir SET_DRESSING.md et ASSETS_NOTION.md.
 
-## Phase 4 — habillage
+## Phase 4 — habillage (V0.2 : contrôle visuel itératif)
 
-Travail par sous-zones et couches: masses architecturales, entrées/façades, signalétique, traces d'activité, mobilier, lumière, finition. Captures réelles au niveau du joueur, vérifications de dégagement, cohérence d'usage et de styles, budget GPU. Itérer localement puis soumettre les vues et la liste de nouvelles ressources. Ne pas construire une scène « belle » au détriment de l'échelle et des accès.
+Travail par sous-zones et couches: masses architecturales, entrées/façades, signalétique, traces d'activité, mobilier, lumière, finition. Captures réelles au niveau du joueur, vérifications de dégagement, cohérence d'usage et de styles, budget GPU. Contrôler chaque sous-zone, ses couches fonctionnelles et ses surfaces calmes. Prendre 3–5 hero views à des caméras reproductibles + vue globale, comparer avant/après, classer BLOCKER/MAJOR/MINOR et corriger localement. Utiliser templates/dressing-report.md. Si les captures Godot ne sont pas disponibles, signaler NOT_TESTED et bloquer le gate; ne pas annoncer un résultat final. Itérer localement puis soumettre les vues et la liste de nouvelles ressources. Ne pas construire une scène « belle » au détriment de l'échelle et des accès.
 
 ## Phase 5 — gel
 
