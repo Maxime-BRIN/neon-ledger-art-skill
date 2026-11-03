@@ -1,0 +1,19 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema", "$id":"https://neon-ledger.local/schemas/zone_masterplan.schema.json",
+ "title":"Neon Ledger Zone Masterplan", "type":"object","additionalProperties":false,
+ "required":["schema_version","zone_id","district_id","name","origin_global","bounds","buildings","roads","connectors","routes","pois"],
+ "properties":{
+  "schema_version":{"const":"1.0"},"zone_id":{"type":"string","pattern":"^ZONE-[0-9]{3,}$"},"district_id":{"type":"string","pattern":"^DIST-[0-9]{3,}$"},"name":{"type":"string","minLength":1},
+  "origin_global":{"$ref":"#/$defs/point"},"bounds":{"type":"object","required":["width_x","length_z"],"properties":{"width_x":{"type":"number","exclusiveMinimum":0},"length_z":{"type":"number","exclusiveMinimum":0}},"additionalProperties":false},
+  "buildings":{"type":"array","items":{"type":"object","required":["id","name","reserved_footprint","built_footprint","height_m","floors","function"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"reserved_footprint":{"$ref":"#/$defs/rect"},"built_footprint":{"$ref":"#/$defs/rect"},"height_m":{"type":"number","exclusiveMinimum":0},"floors":{"type":"integer","minimum":1},"function":{"type":"string"}},"additionalProperties":false}},
+  "roads":{"type":"array","items":{"type":"object","required":["id","name","segments"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"segments":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/rect"}}},"additionalProperties":false}},
+  "connectors":{"type":"array","items":{"type":"object","required":["id","position","width_m","edge","target_zone_id"],"properties":{"id":{"type":"string"},"position":{"$ref":"#/$defs/point"},"width_m":{"type":"number","exclusiveMinimum":0},"edge":{"enum":["north","south","east","west"]},"target_zone_id":{"type":["string","null"]}},"additionalProperties":false}},
+  "routes":{"type":"array","items":{"type":"object","required":["id","name","points"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"points":{"type":"array","minItems":2,"items":{"$ref":"#/$defs/point"}}},"additionalProperties":false}},
+  "pois":{"type":"array","items":{"type":"object","required":["id","name","type","position"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"type":{"type":"string"},"position":{"$ref":"#/$defs/point"}},"additionalProperties":false}},
+  "notes":{"type":"string"}
+ },
+ "$defs":{
+  "point":{"type":"object","required":["x","z"],"properties":{"x":{"type":"number"},"z":{"type":"number"}},"additionalProperties":false},
+  "rect":{"type":"object","required":["min_x","max_x","min_z","max_z"],"properties":{"min_x":{"type":"number"},"max_x":{"type":"number"},"min_z":{"type":"number"},"max_z":{"type":"number"}},"additionalProperties":false}
+ }
+}
