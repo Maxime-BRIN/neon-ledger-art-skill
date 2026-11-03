@@ -3,6 +3,13 @@
 ## Règle commune
 La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables, et **l'accord explicite de l'utilisateur** avant tout passage de phase.
 
+## Gate 1 — source de référence et disponibilité des images
+- Identifier la voie suivie : **image utilisateur/projet**, **concept IA généré**, ou **spécification textuelle enrichie** ; consigner l'origine, le caractère proposé ou approuvé, et les limites.
+- Une image pertinente fournie prévaut sur une nouvelle génération automatique ; une génération n'est obligatoire qu'en l'absence d'image pertinente, si l'outil est réellement disponible et si l'utilisateur ne l'a pas exclue.
+- Si aucune image ne peut être générée, une **référence textuelle approuvée** constitue un livrable valide de phase 1 : ne pas déclarer la gate bloquée pour seule absence d'image. Vérifier que les éléments observables sont assez précis pour être contrôlés au rendu.
+- Pour une référence textuelle, remplacer les comparaisons visuelles source/rendu impossibles par une **matrice critères textuels approuvés / rendu réel / écarts / preuves**. Ne jamais inventer un côte-à-côte ou une capture.
+- La génération d'une image ou l'enrichissement textuel ne valent **jamais** approbation implicite pour passer à la modélisation.
+
 ## Inventaire de référence — passe obligatoire
 - Avant la modélisation, lister les éléments visibles et jugés significatifs de la référence approuvée : géométrie, props, végétation, textiles, signalétique, graffitis, équipements, salissures, corrosion.
 - Pour chacun, renseigner : **présent dans la référence / modélisé / matérialisé ou texturé / vérifié visuellement / omis volontairement (raison)**. Les détails de matière peuvent être prévus pour la phase 3 et signalés « en attente » à la phase 2.
