@@ -5,6 +5,11 @@
 - Fonction gameplay :
 - Distance caméra / vue :
 - Dimensions / unités :
+- Décision sourcing : RÉUTILISER / ADAPTER / CRÉER (preuve, coût et justification)
+- Recherche interne/externe effectuée : (liens et limites)
+- Source, auteur, URL de l'asset précis :
+- Licence / preuve / attribution / autorisation modification et redistribution :
+- Modifications nécessaires / coût estimé :
 - Références validées :
 - Marqueur de silhouette distinctif :
 - Matériaux dominants :
