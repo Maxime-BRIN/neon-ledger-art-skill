@@ -2,6 +2,8 @@
 
 ## Mission 1 — Art direction & concept
 - Lire bible globale, profil de zone et références.
+- **Choisir d'abord la source de référence selon `SKILL.md`** : image pertinente fournie = la privilégier ; aucune image + outil image réellement disponible = générer d'abord un concept principal ; sans outil image (ou sur refus explicite de génération) = construire une référence textuelle précise, proposer son enrichissement lorsque le brief est vague.
+- En cas de référence textuelle, expliciter les propriétés contrôlables (silhouette, dimensions, matériaux, assemblages, fixations, détails visibles, usage, usure, distance caméra), marquer les hypothèses et soumettre la version enrichie à approbation avant toute modélisation.
 - Construire un brief **court** : objet, fonction, marqueurs de silhouette, matières, ambiance, composition et limites de fabrication.
 - Créer **un concept principal** si outil image disponible ; selon l'asset : hero shot, vue produit ou cadrage environnement. Ne pas imposer une vue d'immeuble à un petit prop.
 - Produire 3 choix visuels forts, 3 contraintes de réalisation et les 3 défauts majeurs.
