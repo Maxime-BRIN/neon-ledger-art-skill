@@ -1,0 +1,9 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema", "$id":"https://neon-ledger.local/schemas/city_master_index.schema.json", "title":"Neon Ledger City Registry",
+ "type":"object","additionalProperties":false,"required":["schema_version","city_name","districts","zones","retired_ids"],
+ "properties":{"schema_version":{"const":"1.0"},"city_name":{"type":"string","minLength":1},
+  "districts":{"type":"array","items":{"type":"object","required":["id","name"],"properties":{"id":{"type":"string","pattern":"^DIST-[0-9]{3,}$"},"name":{"type":"string","minLength":1}},"additionalProperties":false}},
+  "zones":{"type":"array","items":{"type":"object","required":["id","district_id","name","masterplan","status","approvals"],"properties":{"id":{"type":"string","pattern":"^ZONE-[0-9]{3,}$"},"district_id":{"type":"string"},"name":{"type":"string"},"masterplan":{"type":"string"},"style_guide":{"type":["string","null"]},"status":{"enum":["draft","design_approved","masterplan_approved","greybox_approved","art_approved","dressed","locked","archived"]},"approvals":{"type":"array","items":{"type":"object","required":["stage","approved_by","approved_at","artifact_sha256","evidence"],"properties":{"stage":{"enum":["brief","masterplan","greybox","art_assets","dressing"]},"approved_by":{"type":"string"},"approved_at":{"type":"string","format":"date-time"},"artifact_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"evidence":{"type":"string","minLength":1}},"additionalProperties":false}}},"additionalProperties":false}},
+  "retired_ids":{"type":"array","items":{"type":"string"}}
+ }
+}
