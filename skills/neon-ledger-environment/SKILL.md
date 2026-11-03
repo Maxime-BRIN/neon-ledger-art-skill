@@ -25,6 +25,12 @@ Identifier : **type d'asset, zone, usage gameplay, échelle/dimensions, distance
 - Prioriser **une sortie visuelle principale** par itération ; produire planches techniques et variantes après validation si elles sont utiles au type d'asset.
 - Corriger les **3 défauts majeurs** plutôt que réécrire tout le prompt.
 
+## Fidélité aux références visuelles
+- Être fidèle à une référence approuvée signifie reproduire **aussi son habillage** (props, textiles, végétation, signalétique, graffitis, salissures), pas uniquement la silhouette et les ouvertures.
+- Avant de déclarer une phase prête, confronter son rendu réel à l'inventaire de référence ; toute omission visible et importante doit être justifiée.
+- Un élément de blockout non finalisé ne doit jamais être présenté comme un asset terminé. La complexité doit rester proportionnée à la distance caméra et au budget temps réel.
+- Préférer des graffitis abstraits ou illisibles ; ne pas inventer de texte lisible ni de marque non validée.
+
 ## Production par jalons
 - Phase 1 : concept et spécification visuelle ; **aucun faux modèle 3D**.
 - Phase 2 : modélisation 3D, UV, pivots, unités, modules éventuels, collisions éventuelles ; produire des preuves réellement rendues.
