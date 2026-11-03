@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0", "zone_id":"ZONE-900", "district_id":"DIST-900", "name":"DEMO — Cour des ateliers (fictif)",
+  "origin_global":{"x":0,"z":0},"bounds":{"width_x":40,"length_z":60},
+  "buildings":[
+   {"id":"B01","name":"Atelier ouest","reserved_footprint":{"min_x":0,"max_x":15,"min_z":8,"max_z":30},"built_footprint":{"min_x":1,"max_x":14,"min_z":9,"max_z":29},"height_m":14,"floors":4,"function":"ateliers"},
+   {"id":"B02","name":"Logements est","reserved_footprint":{"min_x":25,"max_x":40,"min_z":32,"max_z":56},"built_footprint":{"min_x":27,"max_x":39,"min_z":34,"max_z":55},"height_m":20,"floors":6,"function":"logements"}
+  ],
+  "roads":[{"id":"V01","name":"Axe central","segments":[{"min_x":16,"max_x":24,"min_z":0,"max_z":60}]}],
+  "connectors":[{"id":"C-SOUTH","position":{"x":20,"z":0},"width_m":8,"edge":"south","target_zone_id":null},{"id":"C-NORTH","position":{"x":20,"z":60},"width_m":8,"edge":"north","target_zone_id":null}],
+  "routes":[{"id":"R01","name":"Traversée centrale","points":[{"x":20,"z":2},{"x":20,"z":30},{"x":20,"z":58}]}],
+  "pois":[{"id":"P01","name":"Point de rencontre","type":"social","position":{"x":20,"z":30}}],
+  "notes":"Exemple pédagogique; ne représente pas le masterplan officiel de Weakland."
+}
