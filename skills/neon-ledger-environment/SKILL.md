@@ -25,6 +25,16 @@ Identifier : **type d'asset, zone, usage gameplay, échelle/dimensions, distance
 - Prioriser **une sortie visuelle principale** par itération ; produire planches techniques et variantes après validation si elles sont utiles au type d'asset.
 - Corriger les **3 défauts majeurs** plutôt que réécrire tout le prompt.
 
+## Routage obligatoire des références — avant la phase 1
+Déterminer pour **chaque asset**, avant tout concept ou modélisation, si une référence visuelle pertinente est fournie (image jointe, image de projet ou concept déjà approuvé), si l'agent dispose **réellement** d'un outil de génération d'images, et si le brief textuel est suffisamment précis. Une image générique d'ambiance n'est pas automatiquement une référence d'asset.
+1. **Image pertinente fournie** : l'utiliser prioritairement, sans la remplacer ni régénérer par défaut. Identifier ses éléments visibles, son statut (proposée/approuvée) et ses limites. Si la référence est ambiguë, proposer une interprétation et solliciter validation ; ne pas traiter une image non approuvée comme canon.
+2. **Aucune image pertinente + génération d'images disponible** : commencer obligatoirement la **phase 1 par un concept visuel généré**, adapté à l'objet (pour un prop : objet isolé lisible, silhouette, matériaux, détails fonctionnels ; pour une scène : cadrage pertinent). S'appuyer sur le brief et la DA documentée, **une image principale par asset/itération**, sans générer des dizaines de variantes. Présenter ce concept comme proposition et attendre son approbation explicite avant la phase 2.
+3. **Aucune image pertinente + pas de génération d'images disponible** : poursuivre avec une **référence textuelle structurée** ; si la description utilisateur est déjà précise, la conserver et la compléter seulement sur les points de fabrication manquants. Si elle est vague, **proposer une version textuelle plus complète** (fonction, zone, silhouette, proportions, dimensions estimées, construction, matériaux, couleurs motivées, vieillissement, habillage, fixations, lisibilité à distance de jeu, limites et hypothèses), clairement étiquetée `PROPOSITION À VALIDER`. Ne pas inventer d'image ni affirmer en avoir généré. Demander approbation de cette référence textuelle avant la phase 2.
+- **L'image n'est pas obligatoire si l'outil est absent** : une spécification textuelle approuvée vaut référence principale pour les gates, à condition de détailler les éléments contrôlables ; comparer alors le vrai rendu à cette liste de critères plutôt que prétendre produire un côte-à-côte visuel impossible.
+- Si l'utilisateur demande explicitement de **ne pas générer d'image**, respecter ce choix et utiliser la voie textuelle.
+- Pour un lot, traiter les assets individuellement et limiter les générations aux éléments nécessaires ; préserver les concepts existants déjà validés.
+- Ce routage appartient à la **phase 1**, et ne contourne jamais les validations entre phases ni les contraintes de temps réel.
+
 ## Fidélité aux références visuelles
 - Être fidèle à une référence approuvée signifie reproduire **aussi son habillage** (props, textiles, végétation, signalétique, graffitis, salissures), pas uniquement la silhouette et les ouvertures.
 - Avant de déclarer une phase prête, confronter son rendu réel à l'inventaire de référence ; toute omission visible et importante doit être justifiée.
