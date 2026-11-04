@@ -10,7 +10,7 @@ L'utilisateur approuve ou corrige le cahier des charges. Enregistrer une synthè
 
 ## Phase 1 — masterplan
 
-Analyser registre, zones voisines, topographie, route réseau, usage, échelle TPP. Dessiner sur données métriques, auditer puis rendre SVG depuis JSON. Livrer plan lisible et table des emprises. Corriger toutes les violations bloquantes avant de solliciter la validation. Ne jamais faire passer l'imprécision d'une esquisse pour une erreur de caméra.
+Analyser registre, zones voisines, topographie, réseau, usages et échelle TPP. **Avant de dessiner les emprises**, concevoir la morphologie : histoire des formes, hiérarchie boulevard/seuils/lieux/ruelles, sous-espaces, fonctions des vides, séquences d'exploration à hauteur humaine et conflits d'accès. Une grille répétitive peut être pertinente si demandée, mais pas être le défaut automatique. Dessiner ensuite sur données métriques, auditer et rendre le SVG depuis le JSON. **Faire obligatoirement la Design Quality Review distincte des contrôles géométriques** (references/MASTERPLAN.md + templates/masterplan-design-review.md). Un quadrillage générique, une symétrie non voulue, un marché artificiellement centré ou des parcours monotones contraires au brief doivent être corrigés avant de demander APPROUVER_MASTERPLAN. Présenter un lien SVG ouvrable et les arbitrages. Ne pas commencer de greybox ni promettre un test TPP réel avant phase 2.
 
 ## Phase 2 — greybox
 
