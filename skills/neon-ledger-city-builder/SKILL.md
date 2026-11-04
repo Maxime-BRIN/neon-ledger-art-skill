@@ -110,6 +110,8 @@ Ces scripts valident une **partie des invariants géométriques**; ils ne rempla
 - `references/GODOT_GREYBOX.md` — Godot et contrôle de proportions.
 - `references/SET_DRESSING.md` — protocole V0.2 structure-aware, audit asset-fit, sous-zones et itérations visuelles.\n- `templates/dressing-report.md` — rapport de contrôle avant validation humaine.\n- `examples/weakland-dressing-audit.md` — analyse pédagogique du rendu Weakland et exemples de besoins.
 - `references/ASSETS_NOTION.md` — sourcing, licences, Notion, Skill art externe.
+- `references/ASSET_COVERAGE_100.md` — obligation 100 % de besoins essentiels prêts avant la phase 4.
+- `templates/asset-coverage-register.md` — suivi par besoin, solutions identifiées et ressources prêtes.
 - `references/QUALITY_GATES.md` — critères bloquants.
 - `references/PROTECTION.md` — verrouillage et changement minimal.
 - `references/INSTALLATION.md` — installation Claude Code et Codex.
