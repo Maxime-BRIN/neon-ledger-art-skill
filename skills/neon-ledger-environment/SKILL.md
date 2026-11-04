@@ -8,8 +8,8 @@ description: Direction artistique et production 3D cohérente avec Neon Ledger p
 Objectif : produire des visuels distinctifs et des assets techniquement exploitables, **sans uniformiser les quartiers ni confondre rendu séduisant et asset validé**.
 
 ## Charger seulement le nécessaire
-1. Lire `references/NEON_LEDGER_ART_BIBLE.md`.
-2. Lire `references/ZONES.md` pour la zone demandée, s'il existe un profil.
+1. Identifier le projet et lire `references/DA_ROUTING.md` ; lire `references/NEON_LEDGER_ART_BIBLE.md` **uniquement si Neon Ledger est confirmé**.
+2. Si Neon Ledger est confirmé, lire `references/ZONES.md` pour la zone demandée, si un profil existe; sinon consulter la DA du projet externe.
 3. Lire `references/PHASES.md` uniquement pour la phase actuelle.
 4. Pour toute demande de création, d'adaptation ou de sélection d'un asset 3D, lire d'abord `references/ASSET_SOURCING.md` ; rechercher avant de créer.
 5. Pour une étape de validation, lire `references/QUALITY_GATES.md` et `references/VISUAL_FIDELITY.md`.
