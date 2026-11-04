@@ -11,8 +11,18 @@ La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables
 - Présenter la décision et obtenir l'accord requis avant les modifications de projet.
 - Les voies RÉUTILISER / ADAPTER n'exigent pas de nouveau concept IA : appliquer gates de géométrie, PBR et Godot selon travaux réels, sans prétendre avoir créé l'asset.
 
+## Gate 1A — choix de DA préalable à toute image (V1.3)
+
+Lire `DA_ROUTING.md`. Enregistrer `project_identity`, `da_source`, `da_status` et `image_reference_status` :
+- **Neon Ledger confirmé :** DA globale + DA de zone et concepts approuvés. En création originale sans image adéquate, outil disponible = concept image de base obligatoire avant modélisation, soumis à approbation. Le langage visuel recherché est un cyberpunk dense, habité et stratifié, dans l'esprit de la richesse de *Cyberpunk 2077* mais sans copie d'éléments protégés ni style imposé contre une DA locale approuvée.
+- **Autre projet avec DA :** concept uniquement dans cette DA, sans transfert des invariants artistiques propres à Neon Ledger.
+- **Autre projet sans DA :** `BLOCKED_NEEDS_DA` jusqu'à réponse explicite de l'utilisateur; pas d'image ni de modélisation par supposition.
+- **Projet incertain :** demander confirmation; le nom du Skill ne démontre pas l'identité du dépôt.
+- **Référence déjà approuvée :** ne pas créer une image concurrente sans demande. **Outil indisponible :** le signaler, proposer voie textuelle seulement après définition de la DA.
+- Une image générée est un **concept proposé**, jamais l'approbation humaine ni la preuve du modèle 3D.
+
 ## Gate 1 — source de référence et disponibilité des images
-- Identifier la voie suivie : **image utilisateur/projet**, **concept IA généré**, ou **spécification textuelle enrichie** ; consigner l'origine, le caractère proposé ou approuvé, et les limites.
+- Vérifier d'abord le gate DA 1A ci-dessus. Identifier la voie suivie : **image utilisateur/projet**, **concept IA généré**, ou **spécification textuelle enrichie** ; consigner l'origine, le caractère proposé ou approuvé, et les limites.
 - Une image pertinente fournie prévaut sur une nouvelle génération automatique ; **pour la voie CRÉER uniquement**, une génération est obligatoire en l'absence d'image pertinente, si l'outil est réellement disponible et si l'utilisateur ne l'a pas exclue.
 - Si aucune image ne peut être générée, une **référence textuelle approuvée** constitue un livrable valide de phase 1 : ne pas déclarer la gate bloquée pour seule absence d'image. Vérifier que les éléments observables sont assez précis pour être contrôlés au rendu.
 - Pour une référence textuelle, remplacer les comparaisons visuelles source/rendu impossibles par une **matrice critères textuels approuvés / rendu réel / écarts / preuves**. Ne jamais inventer un côte-à-côte ou une capture.
