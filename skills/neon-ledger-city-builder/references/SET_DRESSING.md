@@ -1,4 +1,4 @@
-# Set Dressing V0.2 — Structure-aware, asset-fit, visuel contrôlé
+# Set Dressing V0.4 — Structure-aware, asset-fit, visuel contrôlé
 
 ## Principe
 
@@ -52,14 +52,14 @@ Classification obligatoire :
 
 Calcul par sous-zone : couverture **fonctionnelle** = besoins prioritaires `FIT` ou `ADAPT` prêt / total besoins prioritaires; une valeur quantitative n'est fournie que si le dénominateur est défini. L'agent doit aussi évaluer la couverture **visuelle** sur les hero views et les manques bloquants. Ne pas inventer un score précis sans données.
 
-Si un besoin essentiel est `REJECT` ou `MISSING`, ne pas remplacer par un modèle générique répété : recherche gratuite autorisée seulement si les outils et permissions existent; sinon proposer la recherche et les demandes de création détaillées. L'approbation de DA/Assets **ne peut pas** valider une couverture insuffisante sans consentement explicite à un périmètre réduit ou un prototype inachevé.
+Si un besoin essentiel est `REJECT` ou `MISSING`, ne pas remplacer par un modèle générique répété : recherche gratuite autorisée seulement si les outils et permissions existent; sinon proposer la recherche et les demandes de création détaillées. L'approbation de DA/Assets **exige 100 % des besoins essentiels du périmètre approuvé réellement prêts**, pas seulement planifiés. Les acquisitions et créations nécessitent des permissions explicites; en attente d'accord, laisser la phase 3 en BLOCKED et présenter les décisions. Toute réduction du périmètre doit être approuvée explicitement et conserver les besoins non couverts dans le backlog. Voir `ASSET_COVERAGE_100.md`.
 
 ## Phase 3D — Approvisionnement, priorité à l'adéquation
 
 1. **Réutiliser** seulement les modèles locaux `FIT` et `ADAPT` effectivement pertinents.
 2. **Chercher** des alternatives gratuites, licences compatibles, formats et qualité adaptés, URL source exacte et preuve de licence. Vérifier réellement les références; le nom d'un site n'est pas une preuve de licence. Demander l'autorisation spécifique avant de télécharger/intégrer ou d'écrire dans Notion; présenter des candidats si autorisation absente.
 3. **Proposer** `neon-ledger-environment` (Skill de création d'assets du dépôt) pour les modèles narratifs spécifiques, modules sans équivalent libre ou objets trop singuliers. Fournir un brief et **attendre l'accord**; ne jamais invoquer le Skill automatiquement.
-4. Si la couverture requise reste insuffisante : **stopper la phase**, donner une liste d'éléments bloquants, leur emplacement, coût relatif/impact et options à choisir. Aucun bricolage de remplacement silencieux.
+4. Tant que la couverture reste insuffisante : **continuer les recherches et les briefs d'approvisionnement** pour chaque besoin, puis, si une autorisation ou ressource externe est nécessaire, **suspendre l'exécution à ce point précis** et soumettre les choix. Ne pas passer à la phase 4; reprendre après autorisation. Aucun bricolage de remplacement silencieux.
 
 Toute acquisition est traçable dans l'inventaire et dans Notion **si accès et autorisation réels**. Voir `ASSETS_NOTION.md`.
 
