@@ -12,8 +12,8 @@ Objectif : produire des visuels distinctifs et des assets techniquement exploita
 2. Lire `references/ZONES.md` pour la zone demandée, s'il existe un profil.
 3. Lire `references/PHASES.md` uniquement pour la phase actuelle.
 4. Pour toute demande de création, d'adaptation ou de sélection d'un asset 3D, lire d'abord `references/ASSET_SOURCING.md` ; rechercher avant de créer.
-4. Pour une étape de validation, lire `references/QUALITY_GATES.md`.
-5. Utiliser les modèles de `templates/` si le brief ou le rapport est absent.
+5. Pour une étape de validation, lire `references/QUALITY_GATES.md` et `references/VISUAL_FIDELITY.md`.
+6. Utiliser les modèles de `templates/` si le brief ou le rapport est absent.
 
 ## Routage du brief
 Identifier : **type d'asset, zone, usage gameplay, échelle/dimensions, distance caméra, phase, contraintes disponibles, références existantes**.
@@ -50,6 +50,17 @@ Pour tout asset 3D, appliquer `references/ASSET_SOURCING.md` **avant** le routag
 - Avant de déclarer une phase prête, confronter son rendu réel à l'inventaire de référence ; toute omission visible et importante doit être justifiée.
 - Un élément de blockout non finalisé ne doit jamais être présenté comme un asset terminé. La complexité doit rester proportionnée à la distance caméra et au budget temps réel.
 - Préférer des graffitis abstraits ou illisibles ; ne pas inventer de texte lisible ni de marque non validée.
+
+## Visual Fidelity & Detail Gate — V1.2 (obligatoire)
+
+**Critère principal :** un modèle techniquement conforme mais visuellement banal **ne passe pas** lorsqu'il manque les familles de détails majeures d'une référence artistique approuvée. Le nombre de modules, de triangles ou de tests réussis n'est pas une preuve de fidélité.
+
+1. **Contrat visuel avant production.** Pour chaque concept approuvé (ou spécification textuelle), décomposer par bâtiment, façade et zone visible les familles de détails : architecture secondaire, commerces/entrées, réseaux techniques et ancrages, occupation humaine, enseignes, usure causale, matériaux, éclairage, éléments de toiture. Associer importance perceptive, distance caméra, contrainte métrique, responsable de kit et critères d'acceptation. Utiliser `templates/visual-fidelity-matrix.md` et `references/VISUAL_FIDELITY.md`.
+2. **Statuts explicites par détail :** `EXISTING / ADAPT / SOURCE / CREATE / GODOT_EFFECT / INCOMPATIBLE`; états de réalisation distincts `PLANNED / PRODUCED / INTEGRATED / VERIFIED / DEFERRED_APPROVED`. Une proposition de sourcing ou un concept IA ne signifie jamais « produit ». Les détails transférés à K02/K03/K04 restent ouverts, avec propriétaire et gate de phase; ils ne sont pas tacitement attribués à K01.
+3. **Fidélité de l'ambiance voulue :** si la référence cyberpunk approuvée présente une stratification marquée (câbles et gaines avec attaches, coffrets, ventilations, reprises, vitrines profondes, signalétique diégétique, lumière et traces de vie), **ne pas la réduire** à une façade classique + quelques néons. Ce langage visuel dépend de la référence **locale** : ne pas imposer ces détails à toutes les zones.
+4. **Validation par image réelle.** Pour chaque gate de production, comparer le concept approuvé au **rendu du vrai mesh** depuis Blender et, à l'étape d'intégration, Godot, avec caméras et conditions d'éclairage aussi proches que possible; aussi fournir une capture neutre et une capture TPP contextuelle. Identifier `BLOCKER / MAJOR / MINOR`, les 3 écarts dominants et un plan de correction. Ne jamais présenter un paintover ou une image générée séparément comme preuve de modélisation.
+5. **Construction mesurée et performante.** Les images de concept ne sont **pas** des plans cotés : positions, ouvertures, emprises, 1,50 m de passage, clearance, hauteurs, saillies et toitures restent gouvernés par le JSON/contrat technique. Les ajouts hors enveloppe doivent être classés `INCOMPATIBLE` et soumis à arbitrage; jamais placés par défaut. Géométrie réelle pour relief/silhouette/ombre; trim sheets, normal maps, decals et éclairage pour microdétail, avec budgets mesurés.
+6. **Gate sans faux succès :** un asset peut être `GEOMETRY_PASS / VISUAL_INCOMPLETE` : autoriser les tests d'intégration isolés, mais **pas** `ART_READY` ou validation finale tant que les écarts majeurs de sa **portée approuvée** restent ouverts. Un kit architectural K01 peut être accepté comme base sans que la façade enrichie K01+K02+K03+K04 soit déclarée terminée.
 
 ## Production par jalons
 - Étape 0 : diagnostic réutiliser / adapter / créer et vérification de licence ; aucune génération d'image inutile.
