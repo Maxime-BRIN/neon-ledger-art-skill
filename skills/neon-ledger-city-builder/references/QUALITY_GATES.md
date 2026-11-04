@@ -16,11 +16,11 @@
 
 **Avant `APPROUVER_MASTERPLAN`, la réussite du contrôle JSON/SVG ne suffit plus.** Exécuter une revue de conception conforme à `references/MASTERPLAN.md` et à `templates/masterplan-design-review.md`.
 
-Critères obligatoires : adéquation morphologique au brief, hiérarchie des voies et des seuils, rapport fonctionnel bâtiments/espaces libres, implantation et gabarits motivés, variété souhaitée des perspectives, séquence de marche TPP hypothétique, densité viable, accès et largeur réellement utilisable, lisibilité du SVG, fidélité entre représentation JSON et dessin.
+Critères obligatoires : constructibilité et simplicité raisonnée des emprises bâties (formes polygonales complexes seulement si motivées), modularité et réemploi d'assets anticipés **sans imposer de grille symétrique**; adéquation morphologique au brief, hiérarchie des voies et des seuils, rapport fonctionnel bâtiments/espaces libres, implantation et gabarits motivés, variété souhaitée des perspectives, séquence de marche TPP hypothétique, densité viable, accès et largeur réellement utilisable, lisibilité du SVG, fidélité entre représentation JSON et dessin.
 
 **BLOCKER :** contradiction avec exigence approuvée; réduction cachée de gabarit/largeur/nombre; incohérence majeure JSON/SVG; accès irréalisable démontré; système de représentation incapable d'exprimer fidèlement la géométrie mais prétendant la valider.
 
-**MAJOR :** composition en grille/miroir par facilité malgré un brief organique; marché central artificiellement posé sans hiérarchie ni raison d'usage; espaces résiduels sans fonction; cheminements uniformes et perspectives monotones malgré la demande de déambulation riche; copies de mêmes emprises par défaut sans justification.
+**MAJOR :** emprises de bâtiments inutilement polygonales ou découpées sans justification architecturale/fonctionnelle, compliquant la production 3D; composition en grille/miroir par facilité malgré un brief organique; marché central artificiellement posé sans hiérarchie ni raison d'usage; espaces résiduels sans fonction; cheminements uniformes et perspectives monotones malgré la demande de déambulation riche; copies de mêmes emprises par défaut sans justification.
 
 Ces problèmes ne sont **pas** des fautes universelles : si la symétrie et les répétitions sont explicitement demandées (quartier corporatif ordonné, HLM planifiés) et urbaniquement motivées, elles peuvent être correctes. Ne jamais transformer ce gate en algorithme imposant un plan « chaotique ». Corriger la composition ou proposer une nouvelle version / arbitrage humain avant de déclarer le masterplan prêt à validation.
 
