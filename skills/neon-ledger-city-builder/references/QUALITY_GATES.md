@@ -1,16 +1,30 @@
-# Quality Gates — V0.2
+# Quality Gates — V0.3
 
 **Principe :** une phase ne passe pas simplement parce qu'un script est vert ou que quelques modèles sont placés. Les décisions esthétiques restent humaines. Les preuves d'exécution doivent être vérifiables.
 
 | Gate | Critères techniques minimum | Décision |
 | --- | --- | --- |
 | 0 Cadrage | Besoins imposés, hypothèses, variantes pertinentes, contradictions révélées | APPROUVER_CADRAGE |
-| 1 Masterplan | JSON cohérent, SVG généré depuis JSON, géométrie/flux/raccordements contrôlés | APPROUVER_MASTERPLAN |
+| 1 Masterplan | JSON cohérent, SVG réellement présenté, géométrie/flux/raccordements contrôlés **ET revue indépendante de morphologie urbaine et séquences TPP** | APPROUVER_MASTERPLAN |
 | 2 Greybox | Emprises mesurées dans la scène chargée, caméra TPP, collisions/parcours réels testés | APPROUVER_GREYBOX |
 | 3A Intention | Style guide, références commentées, sous-zones, usages et hero views identifiés | Intégré au gate DA/Assets |
 | 3B Asset-fit | Matrice de besoins/fonctions, fit géométrique et artistique, `FIT/ADAPT/REJECT/MISSING/PLACEHOLDER`, sources et licences traçables | APPROUVER_DA_ASSETS uniquement si couverture acceptable |
 | 4 Habillage | Toutes les sous-zones essentielles traitées, pas de substitutions non approuvées, captures avant/après, problèmes suivis, navigation/performance, zones gelées intactes | APPROUVER_HABILLAGE |
 | 5 Gel | Approbation phase 4 explicite, registre/diff/rapports alignés | Passage `locked` |
+
+## Masterplan Design Quality Gate — ajout V0.3
+
+**Avant `APPROUVER_MASTERPLAN`, la réussite du contrôle JSON/SVG ne suffit plus.** Exécuter une revue de conception conforme à `references/MASTERPLAN.md` et à `templates/masterplan-design-review.md`.
+
+Critères obligatoires : adéquation morphologique au brief, hiérarchie des voies et des seuils, rapport fonctionnel bâtiments/espaces libres, implantation et gabarits motivés, variété souhaitée des perspectives, séquence de marche TPP hypothétique, densité viable, accès et largeur réellement utilisable, lisibilité du SVG, fidélité entre représentation JSON et dessin.
+
+**BLOCKER :** contradiction avec exigence approuvée; réduction cachée de gabarit/largeur/nombre; incohérence majeure JSON/SVG; accès irréalisable démontré; système de représentation incapable d'exprimer fidèlement la géométrie mais prétendant la valider.
+
+**MAJOR :** composition en grille/miroir par facilité malgré un brief organique; marché central artificiellement posé sans hiérarchie ni raison d'usage; espaces résiduels sans fonction; cheminements uniformes et perspectives monotones malgré la demande de déambulation riche; copies de mêmes emprises par défaut sans justification.
+
+Ces problèmes ne sont **pas** des fautes universelles : si la symétrie et les répétitions sont explicitement demandées (quartier corporatif ordonné, HLM planifiés) et urbaniquement motivées, elles peuvent être correctes. Ne jamais transformer ce gate en algorithme imposant un plan « chaotique ». Corriger la composition ou proposer une nouvelle version / arbitrage humain avant de déclarer le masterplan prêt à validation.
+
+Le gate examine d'abord **le plan 2D** et ses parcours pressentis. Il ne certifie **pas** la caméra réelle ni la jouabilité Godot : celles-ci restent à tester en phase 2.
 
 ## Nouvelle classification V0.2 des défauts
 
