@@ -1,4 +1,4 @@
-# Quality gates — GO / NO-GO
+# Quality gates — GO / NO-GO (Visual Fidelity V1.2)
 
 ## Règle commune
 La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables, et **l'accord explicite de l'utilisateur** avant tout passage de phase.
@@ -18,6 +18,17 @@ La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables
 - Pour une référence textuelle, remplacer les comparaisons visuelles source/rendu impossibles par une **matrice critères textuels approuvés / rendu réel / écarts / preuves**. Ne jamais inventer un côte-à-côte ou une capture.
 - La génération d'une image ou l'enrichissement textuel ne valent **jamais** approbation implicite pour passer à la modélisation.
 
+## Visual Fidelity & Detail Gate V1.2 — transversal et bloquant
+
+Lire `VISUAL_FIDELITY.md` et présenter la matrice `../templates/visual-fidelity-matrix.md`. Distinguer **géométrie validée** de **rendu fidèle à la référence approuvée** : le volume d'un bâtiment ou 70 modules conformes ne suffisent pas si les détails essentiels attendus par **la portée du kit courant** sont absents.
+
+- `MAJOR` : façade générique incompatible avec le concept approuvé; commerce sans identité lorsqu'il relève du kit livré; grands réseaux/équipements/signaux architecturaux de référence supprimés sans arbitrage; répétition mécanique contradictoire avec le brief; pseudo-détails en plans plats quand ils modifient la silhouette.
+- `BLOCKER` : modification non autorisée des emprises, ouvertures ou gabarits; détail mettant en échec la largeur utile/TPP; source concept IA prétendue mesh final; ressource tierce intégrée sans preuve de droits.
+- **No-Go ART_READY** en présence d'un `MAJOR` non corrigé sur les éléments inclus dans la portée approuvée. **Différer proprement** un besoin appartenant à K02/K03/K04 avec ID, kit propriétaire, dépendance et approbation humaine; ne pas le compter comme réalisé, mais ne pas faire échouer K01 pour un détail explicitement commandé plus tard.
+- Preuves : côte à côte images de référence / captures du mesh réel sous caméra comparable + vue neutre + TPP Godot si accessible; état réel de chaque famille; 3 écarts dominants, statut avant/après et impact performance.
+- La fidélité **ne se note pas au pixel près**, et aucune quantité décorative ni palette néon universelle n'est imposée. Elle est évaluée par silhouette, identité, profondeur, densité pertinente, lisibilité des usages et vie perçue selon le concept local.
+- Les concepts générés sont **artistiques**, non cotés. Toute saillie de toiture, garde-corps, enseigne ou support hors emprise validée doit être adapté ou soumis à autorisation, sans contournement silencieux.
+
 ## Inventaire de référence — passe obligatoire
 - Avant la modélisation, lister les éléments visibles et jugés significatifs de la référence approuvée : géométrie, props, végétation, textiles, signalétique, graffitis, équipements, salissures, corrosion.
 - Pour chacun, renseigner : **présent dans la référence / modélisé / matérialisé ou texturé / vérifié visuellement / omis volontairement (raison)**. Les détails de matière peuvent être prévus pour la phase 3 et signalés « en attente » à la phase 2.
@@ -35,7 +46,7 @@ La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables
 ### Gate 2 — Modélisation
 - Fichiers 3D ouverts / inspectés ; dimensions et axes mesurés
 - Détails indispensables réellement géométriques ; props et textiles lisibles à distance de jeu, aucun blockout caché comme asset final
-- Inventaire de référence renseigné ; éléments importants modélisés ou omissions explicitement justifiées
+- Inventaire de référence et matrice visuelle renseignés ; détails majeurs relevant de cette phase réellement produits, ou corrections/exception humaine explicites
 - UV, normales, pivots, alignements contrôlés
 - Collisions adaptées au gameplay ; jointures testées si modularité
 - Rendu clay issu du modèle ; export GLB inspecté
@@ -46,7 +57,7 @@ La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables
 - Rendus neutres et contextuels provenant du vrai modèle
 - Inventaire de référence complété (dressing, props, textiles, végétation, salissures) ; toutes les omissions majeures justifiées
 - Comparaison côte à côte référence / vrai rendu à hauteur de joueur et trois écarts dominants traités
-- Validation artistique **distincte** de la validation technique : silhouette, richesse visuelle, storytelling et fidélité vérifiés
+- Validation artistique **distincte** de la validation technique : silhouette, richesse visuelle, storytelling et fidélité vérifiés selon la matrice; ne pas déclarer `ART_READY` avant disparition des `MAJOR` du périmètre livré
 - Godot importé/testé **ou explicitement non vérifié**
 - Performance mesurée quand possible, sans FPS imaginés
 - Fichiers sources, licences et limitations documentés
