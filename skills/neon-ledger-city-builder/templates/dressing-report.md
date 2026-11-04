@@ -4,6 +4,15 @@
 **Phase et validation humaine déjà obtenue :** [preuve/autorisation, sans l'inventer]  
 **Contrats utilisés :** [masterplan SHA, greybox, style guide, références]
 
+## 0. Couverture préalable — preuve de phase 3
+
+**Périmètre et référentiel :** [zone, IDs et hash]
+**Solutions identifiées :** [X/N]  
+**Ressources prêtes :** [Y/N]  
+**Registre des besoins :** [lien vers templates/asset-coverage-register.md rempli]
+**Confirmation `APPROUVER_DA_ASSETS` :** [preuve de validation humaine explicite]  
+**Si Y < N :** ne pas produire de rapport de phase 4 en prétendant que le gate est ouvert.
+
 ## 1. Intention artistique validée
 
 | Exigence utilisateur / référence | Interprétation réalisable (géométrie / matériau / éclairage / VFX / activité) | Statut | Preuve |
