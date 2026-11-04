@@ -3,7 +3,7 @@ name: neon-ledger-city-builder
 description: "Workflow unique pour cadrer, planifier, étendre, construire et habiller des zones urbaines de Neon Ledger sous Godot 4. Utiliser pour toute demande de création/extension de quartier, masterplan, SVG métrique, greybox, set dressing ou validation de zone. Exige des validations humaines aux jalons, protège les zones existantes et privilégie une source JSON canonique."
 ---
 
-# Neon Ledger — City Builder (V0.3)
+# Neon Ledger — City Builder (V0.4)
 
 ## Mission
 
@@ -34,7 +34,7 @@ Si ces sources se contredisent, **arrêter les opérations concernées**, expose
 | 0 — Cadrage | Cahier des charges avec contraintes imposées, hypothèses et propositions par défaut; géographie et intentions | **APPROUVER_CADRAGE** |
 | 1 — Masterplan | JSON canonique, **SVG lisible réellement présenté**, contrôles métriques **et Design Quality Gate indépendant** : morphologie urbaine, hiérarchie, variété de composition conforme au brief, usages des vides, parcours TPP prévus | **APPROUVER_MASTERPLAN** seulement après revue urbanistique documentée |
 | 2 — Greybox | Volumes Godot fidèles, mesures de scènes, tests de navigation avec personnage et caméra réels, captures | **APPROUVER_GREYBOX** |
-| 3 — Direction artistique et assets | Guide local, références étudiées, hero views initiales, **audit de couverture et d'adéquation des assets par sous-zone** (FIT/ADAPT/REJECT/MISSING), sourcing proposé ou manques bloquants | **APPROUVER_DA_ASSETS** si couverture des besoins essentiels acceptable |
+| 3 — Direction artistique et assets | Guide local, références étudiées, hero views initiales, **audit de couverture et d'adéquation des assets par sous-zone** (FIT/ADAPT/REJECT/MISSING), sourcing proposé ou manques bloquants | **APPROUVER_DA_ASSETS** seulement à 100 % de besoins essentiels couverts par des ressources réellement disponibles/validées sur le périmètre approuvé |
 | 4 — Habillage et vérification | Placement **par sous-zone et par couches**, micro-scènes justifiées, **comparatifs avant/après aux mêmes caméras TPP**, itérations et suivi des défauts BLOCKER/MAJOR/MINOR | **APPROUVER_HABILLAGE** après gate visuel documenté |
 | 5 — Gel | Finaliser index, version, preuve et état `locked`; publier le bilan | Validation de phase 4 requise; le gel ne peut être auto-approuvé |
 
@@ -77,6 +77,17 @@ L'agent peut travailler, vérifier et corriger **à l'intérieur de la phase aut
 - L'habillage doit raconter un usage plausible, et non disperser des props arbitraires; conserver lignes de vue, accès, dégagements et budget GPU. Le style vient de la fiche DA **approuvée du quartier**, pas d'une recette cyberpunk universelle.\n- **Gate V0.2 avant placement :** inspecter les références et captures de départ, décomposer les façades/sols/toitures par fonction, identifier 3–5 vues héroïques adaptées, remplir la matrice Asset Fit `FIT/ADAPT/REJECT/MISSING/PLACEHOLDER`, calculer la couverture des besoins prioritaires et signaler les manques bloquants. **Un asset existant mais inadapté doit être rejeté, jamais répété pour remplir l'espace.** Voir `references/SET_DRESSING.md`.\n- **Gate V0.2 après placement :** preuves des couches appliquées ou justifiées N/A pour chaque sous-zone, micro-scènes d'usage plausibles, captures comparables avant/après, défauts classés et corrections itératives. **Aucune validation finale en présence de BLOCKER, et pas de MAJOR caché.** Une scène inachevée peut être présentée comme prototype partiel, jamais comme rendu final. Utiliser `templates/dressing-report.md`.
 - Pour les assets, **réutiliser uniquement les candidats réellement adaptés**; si une catégorie essentielle manque, proposer une recherche d'alternatives gratuites (source/licence vérifiées), une adaptation ou la création sur mesure. **Sourcing à proposer et réaliser avec des outils disponibles**; téléchargements, intégrations et écritures Notion nécessitent les autorisations correspondantes. Tenir les listes « retenus / rejetés / nouveaux / manquants » et leurs preuves.
 - Si un asset sur mesure est justifié, **proposer** `neon-ledger-environment` (répertoire `skills/neon-ledger-environment` de la bibliothèque) avec une mini-spécification; **ne jamais le déclencher automatiquement**. Voir `references/ASSETS_NOTION.md`.
+
+## Phase 3 — Obligation de résolution de 100 % des besoins essentiels (V0.4)
+
+- Un diagnostic « 15/50 couverts » est un **point de départ, jamais une fin de phase**. L'agent continue la recherche et la planification des solutions pour **chaque besoin essentiel** à l'échelle du périmètre défini (par défaut, toute la zone approuvée).
+- Suivre deux compteurs **distincts et auditables** : **solutions identifiées N/N** (candidat concret avec preuve de fit et accès réaliste, ou création sur mesure précisément spécifiée et soumise à autorisation) et **ressources prêtes N/N** (asset existant validé, adapté et testé, ou acquisition/création autorisée effectivement obtenue, licence vérifiée et import Godot validé). Une piste de recherche, une URL non contrôlée, un devis, un brief ou une simple intention **ne compte jamais comme prêt**.
+- Pour chaque besoin non couvert : chercher des alternatives **réellement pertinentes**; étudier les assets locaux, catalogues gratuits et kitbash; si aucune solution existante satisfaisante n'est trouvée, proposer un **brief de création sur mesure** via `neon-ledger-environment`, sans déclenchement automatique. **Ne jamais arrêter l'analyse après neuf liens si 35 besoins restent sans solution.**
+- Si l'utilisateur n'a pas encore autorisé l'acquisition ou la création, présenter **un lot de décisions d'approvisionnement** (candidats, preuves/licences, coûts/effort, réemploi, besoins résolus) puis **rester en Phase 3**. Demander la permission, reprendre ensuite jusqu'à atteindre N/N ressources prêtes; ne pas solliciter `APPROUVER_DA_ASSETS` prématurément.
+- **Pas de contournement** en réduisant artificiellement le dénominateur, en reclassant des essentiels en optionnels, en inventant des licences ou en comptant une référence pour plusieurs besoins incompatibles. Tout changement de périmètre ou de besoin essentiel exige arbitrage humain explicite et traçable.
+- Vérifier les compteurs : **modèles uniques ≠ évaluations candidat/besoin ≠ besoins essentiels**. Si 51 modèles produisent 56 jugements, indiquer clairement les deux populations et les affectations multiples.
+- Les autorisations restent distinctes : sourcing/recherche, téléchargement, intégration, écriture Notion, lancement de `neon-ledger-environment`, modification d'une zone verrouillée. Aucune action nécessitant un accord ne peut être devinée. Une impossibilité externe est un **BLOCKED** expliqué, jamais un 100 % fictif.
+- Lire `references/ASSET_COVERAGE_100.md` et livrer `templates/asset-coverage-register.md` avant de soumettre la phase 3.
 
 ## Livrables et transparence à chaque jalon
 
