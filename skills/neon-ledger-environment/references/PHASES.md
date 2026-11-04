@@ -14,12 +14,12 @@
 Lire `VISUAL_FIDELITY.md` et remplir `../templates/visual-fidelity-matrix.md` lorsque des concepts visuels approuvés existent ou qu'un brief demande une richesse de détails spécifique. La matrice suit les détails par famille, kit responsable, état de production, conformité de gabarit et importance TPP. Ne jamais clôturer la matrice au seul motif que la géométrie globale est correcte.
 
 ## Mission 1 — Art direction & concept
-- Lire bible globale, profil de zone et références.
+- Identifier d'abord le projet et appliquer `DA_ROUTING.md` : bible globale Neon Ledger uniquement si ce projet est confirmé; sinon DA du projet/prompt; si DA externe absente, question obligatoire et arrêt avant toute génération.
 - **Pour la voie CRÉER uniquement, choisir d'abord la source de référence selon `SKILL.md`** : image pertinente fournie = la privilégier ; aucune image + outil image réellement disponible = générer d'abord un concept principal ; sans outil image (ou sur refus explicite de génération) = construire une référence textuelle précise, proposer son enrichissement lorsque le brief est vague.
 - En cas de référence textuelle, expliciter les propriétés contrôlables (silhouette, dimensions, matériaux, assemblages, fixations, détails visibles, usage, usure, distance caméra), marquer les hypothèses et soumettre la version enrichie à approbation avant toute modélisation.
 - Construire un brief **court** : objet, fonction, marqueurs de silhouette, matières, ambiance, composition et limites de fabrication.
 - Pour la voie CRÉER, créer **un concept principal** si outil image disponible ; selon l'asset : hero shot, vue produit ou cadrage environnement. Ne pas imposer une vue d'immeuble à un petit prop.
-- Produire 3 choix visuels forts, 3 contraintes de réalisation et les 3 défauts majeurs.
+- Pour Neon Ledger sans concept pertinent déjà approuvé : **produire un concept de base du nouvel asset en style cyberpunk Neon Ledger** si l'outil image est accessible, sans recopier d'éléments spécifiques d'une autre œuvre. Pour un autre projet, appliquer sa DA explicitée sans contamination cyberpunk; si absente, demander avant toute création.\n- Produire 3 choix visuels forts, 3 contraintes de réalisation et les 3 défauts majeurs.
 - Sur retour négatif : préserver les acquis et corriger les 3 plus gros défauts ; pas de régénération massive automatique.
 - Après approbation, produire si nécessaire orthographies, gros plans, variantes et dimensions de référence.
 - Ne jamais confondre concept, plan à l'échelle et mesh.\n- **Gate art :** vérifier que le concept exprime réellement les marqueurs forts de DA demandés, pas simplement le bâti générique avec quelques accents lumineux; détailler les familles visibles à produire et celles qui relèvent d'un autre kit/phase.
