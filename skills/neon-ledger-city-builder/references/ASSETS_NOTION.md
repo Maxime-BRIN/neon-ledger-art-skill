@@ -1,4 +1,4 @@
-# Assets, sourcing, licences et Notion — V0.2
+# Assets, sourcing, licences et Notion — V0.4
 
 BDD Notion cible : https://app.notion.com/p/ns-group/5dc0caa5658e48499bb87bcf0d9be012?v=40a79de523e180268e68000ceb50e47f
 
@@ -14,7 +14,7 @@ Pour chaque besoin, le registre `asset-needs` inclut :
 
 Ne jamais confondre quantité d'objets instanciés et couverture des fonctions. Dix copies du même immeuble ne couvrent pas un besoin de devanture, d'auvent, de stand, de sas d'entrée ou de réseau technique.
 
-## Modes de résolution des manques
+## Couverture obligatoire de tous les besoins essentiels\n\nL'inventaire d'assets ne suffit pas : partir de la liste complète d'IDs de besoins essentiels et rechercher une solution concrète **pour chacun**. Si le sourcing gratuit ne donne rien, préparer le brief de création sur mesure et obtenir une décision humaine. Continuer les boucles jusqu'à N/N ressources prêtes (50/50 dans le cas Faubourg des Traverses); ne jamais transmettre un 15/50 pour demander une validation de phase. Lire `ASSET_COVERAGE_100.md`.\n\n## Modes de résolution des manques
 
 1. **Asset existant** : inspecter géométrie, dimensions, usage, qualité, couleurs, variations possibles; adopter uniquement si `FIT` ou `ADAPT` réellement faisable.
 2. **Sourcing gratuit** : effectuer une recherche ciblée lorsque les outils web sont disponibles, avec mots-clés qui décrivent fonction, encombrement, qualité et style. Présenter les candidats précis (URL source, capture/preview lorsque disponible, format, licence, créateur, attribution, adaptation). Vérifier sur la page source, pas sur une page de résultat. Gratuit ≠ libre d'usage commercial. Vérifier restrictions de redistribution, attribution, modifications et intégration au jeu. Sourcing/recherche ≠ téléchargement ni intégration.
@@ -42,4 +42,4 @@ Toujours communiquer les 4 sections :
 3. **Assets gratuits identifiés / nouveaux intégrés** avec URLs, licences et état Notion vérifiés.
 4. **Assets sur mesure proposés** avec mini-brief + problèmes bloquants et approbations nécessaires.
 
-Si aucune acquisition externe n'a été faite, indiquer `aucun nouvel asset téléchargé`. Si les besoins essentiels restent ouverts, **le rendu final est non approuvable** sauf accord explicite pour un livrable partiel.
+Si aucune acquisition externe n'a été faite, indiquer `aucun nouvel asset téléchargé`. Si des besoins essentiels restent ouverts, **APPROUVER_DA_ASSETS et le démarrage de la phase 4 sont interdits**. Une modification explicite du périmètre peut débloquer un pilote réduit, mais les besoins exclus restent recensés; le quartier complet n'est pas déclaré couvert.
