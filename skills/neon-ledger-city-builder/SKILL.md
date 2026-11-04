@@ -3,7 +3,7 @@ name: neon-ledger-city-builder
 description: "Workflow unique pour cadrer, planifier, étendre, construire et habiller des zones urbaines de Neon Ledger sous Godot 4. Utiliser pour toute demande de création/extension de quartier, masterplan, SVG métrique, greybox, set dressing ou validation de zone. Exige des validations humaines aux jalons, protège les zones existantes et privilégie une source JSON canonique."
 ---
 
-# Neon Ledger — City Builder (V0.2)
+# Neon Ledger — City Builder (V0.3)
 
 ## Mission
 
@@ -32,7 +32,7 @@ Si ces sources se contredisent, **arrêter les opérations concernées**, expose
 | Phase | Production agent | Validation humaine avant progression |
 | --- | --- | --- |
 | 0 — Cadrage | Cahier des charges avec contraintes imposées, hypothèses et propositions par défaut; géographie et intentions | **APPROUVER_CADRAGE** |
-| 1 — Masterplan | Modèle JSON canonique, **SVG lisible dérivé du JSON**, audit des raccords/flux/emprises, rapport | **APPROUVER_MASTERPLAN** |
+| 1 — Masterplan | JSON canonique, **SVG lisible réellement présenté**, contrôles métriques **et Design Quality Gate indépendant** : morphologie urbaine, hiérarchie, variété de composition conforme au brief, usages des vides, parcours TPP prévus | **APPROUVER_MASTERPLAN** seulement après revue urbanistique documentée |
 | 2 — Greybox | Volumes Godot fidèles, mesures de scènes, tests de navigation avec personnage et caméra réels, captures | **APPROUVER_GREYBOX** |
 | 3 — Direction artistique et assets | Guide local, références étudiées, hero views initiales, **audit de couverture et d'adéquation des assets par sous-zone** (FIT/ADAPT/REJECT/MISSING), sourcing proposé ou manques bloquants | **APPROUVER_DA_ASSETS** si couverture des besoins essentiels acceptable |
 | 4 — Habillage et vérification | Placement **par sous-zone et par couches**, micro-scènes justifiées, **comparatifs avant/après aux mêmes caméras TPP**, itérations et suivi des défauts BLOCKER/MAJOR/MINOR | **APPROUVER_HABILLAGE** après gate visuel documenté |
@@ -47,6 +47,14 @@ L'agent peut travailler, vérifier et corriger **à l'intérieur de la phase aut
 - Les paramètres mineurs peuvent recevoir des valeurs de travail réversibles, présentées pour contrôle au jalon; **ne jamais présenter un défaut comme approuvé**.
 - En cas de demande « grand quartier d'affaires, trois tours centrales, place et bureaux », conserver ces exigences; **ne jamais forcer** les dimensions, les matériaux ou une esthétique de Weakland. Recommander seulement des solutions compatibles avec le monde et les quartiers voisins.
 - Si l'utilisateur demande une comparaison, proposer au plus 2–3 variantes réellement distinctes avant de choisir.
+
+## Conception urbaine — gate anti-template V0.3
+
+- **La validation géométrique n'est pas la validation urbanistique.** Un plan de six HLM rangés en deux colonnes autour d'un marché rectangle peut passer les tests JSON et rester incompatible avec un brief de ruelles organiques. L'agent doit composer le quartier selon ses usages et son histoire, et non remplir une grille de rectangles.
+- Avant les emprises, développer **une morphologie motivée** : hiérarchie boulevard/seuils/ruelles/lieux de vie, accès, densité et fonctions; proposer si pertinent des alternatives de composition. Pour une demande de ville organique, tester décalages crédibles, séquences de marche TPP, lieux resserrés/ouverts, changement de perspectives et diversité de rapports à la rue. **Ne jamais imposer l'asymétrie** si l'utilisateur veut un quartier ordonné.
+- Le format actuel de rectangles axis-alignés ne sait pas représenter fidèlement des rotations ou emprises irrégulières. Ne pas promettre des géométries qu'il ne peut pas exprimer : proposer une décomposition claire ou une extension de schéma/validateur soumise à approbation.
+- Avant d'appeler `APPROUVER_MASTERPLAN`, **lire obligatoirement** `references/MASTERPLAN.md`, remplir `templates/masterplan-design-review.md` et corriger les `BLOCKER` et `MAJOR` non assumés. Si le SVG est symétrique/générique contrairement aux exigences, le considérer comme un défaut de conception même si les chiffres passent. Ne pas commencer Godot.
+- L'agent doit fournir **le SVG lui-même dans un fichier effectivement ouvrable** et une synthèse de conception. L'approbation du cadrage n'est pas celle du masterplan; garder le jalon humain.
 
 ## Source de vérité et visualisation
 
@@ -86,7 +94,7 @@ Ces scripts valident une **partie des invariants géométriques**; ils ne rempla
 
 - `references/WORKFLOW.md` — questions, livrables, jalons, reprise.
 - `references/DATA_CONTRACT.md` — conventions, registre, IDs, données métriques.
-- `references/MASTERPLAN.md` — urbanisme, SVG et mesures.
+- `references/MASTERPLAN.md` — composition morphologique V0.3, anti-grille générique, parcours TPP, SVG et mesures.\n- `templates/masterplan-design-review.md` — contrôle de conception urbain indépendant du validateur JSON.
 - `references/EXTENSIONS.md` — raccords, continuité, transitions.
 - `references/GODOT_GREYBOX.md` — Godot et contrôle de proportions.
 - `references/SET_DRESSING.md` — protocole V0.2 structure-aware, audit asset-fit, sous-zones et itérations visuelles.\n- `templates/dressing-report.md` — rapport de contrôle avant validation humaine.\n- `examples/weakland-dressing-audit.md` — analyse pédagogique du rendu Weakland et exemples de besoins.
