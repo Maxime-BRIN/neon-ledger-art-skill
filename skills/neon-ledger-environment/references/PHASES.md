@@ -9,6 +9,10 @@
 
 
 
+## Fidélité artistique transversale — V1.2
+
+Lire `VISUAL_FIDELITY.md` et remplir `../templates/visual-fidelity-matrix.md` lorsque des concepts visuels approuvés existent ou qu'un brief demande une richesse de détails spécifique. La matrice suit les détails par famille, kit responsable, état de production, conformité de gabarit et importance TPP. Ne jamais clôturer la matrice au seul motif que la géométrie globale est correcte.
+
 ## Mission 1 — Art direction & concept
 - Lire bible globale, profil de zone et références.
 - **Pour la voie CRÉER uniquement, choisir d'abord la source de référence selon `SKILL.md`** : image pertinente fournie = la privilégier ; aucune image + outil image réellement disponible = générer d'abord un concept principal ; sans outil image (ou sur refus explicite de génération) = construire une référence textuelle précise, proposer son enrichissement lorsque le brief est vague.
@@ -18,7 +22,7 @@
 - Produire 3 choix visuels forts, 3 contraintes de réalisation et les 3 défauts majeurs.
 - Sur retour négatif : préserver les acquis et corriger les 3 plus gros défauts ; pas de régénération massive automatique.
 - Après approbation, produire si nécessaire orthographies, gros plans, variantes et dimensions de référence.
-- Ne jamais confondre concept, plan à l'échelle et mesh.
+- Ne jamais confondre concept, plan à l'échelle et mesh.\n- **Gate art :** vérifier que le concept exprime réellement les marqueurs forts de DA demandés, pas simplement le bâti générique avec quelques accents lumineux; détailler les familles visibles à produire et celles qui relèvent d'un autre kit/phase.
 
 ## Mission 2 — Géométrie 3D Blender
 - Pour une adaptation approuvée, conserver autant que possible les géométries correctes et travailler uniquement sur les changements nécessaires ; ne pas refaire le modèle de zéro sans raison documentée.
@@ -35,7 +39,7 @@
 - Tout élément important et lisible à **5–15 m** doit avoir une silhouette reconnaissable. Un carton n'est pas un cube brut, un sac poubelle n'est pas une boîte, un linge n'est pas un simple plan rectangulaire ; adapter le niveau de complexité à sa taille à l'écran.
 - Pour les textiles visibles : drapé crédible, attaches/fil/pinces quand discernables et épaisseur apparente si nécessaire ; les textures de tissu relèvent de la phase 3.
 - Pour les équipements : supports et connexions crédibles, pas de câbles/tuyaux flottants.
-- Une primitive de blockout reste autorisée **uniquement si explicitement marquée provisoire** dans l'inventaire et le rapport ; elle interdit de présenter l'asset correspondant comme final.
+- Produire une capture du véritable assemblage 3D à angle proche du concept, ainsi qu'un rendu clay; évaluer profondeur, variation et densité perceptible de détails, par façade. Une ossature cohérente mais très pauvre en détail reste `GEOMETRY_PASS / VISUAL_INCOMPLETE` si les familles majeures du périmètre de cette phase sont absentes.\n- Une primitive de blockout reste autorisée **uniquement si explicitement marquée provisoire** dans l'inventaire et le rapport ; elle interdit de présenter l'asset correspondant comme final.
 - Conserver les choix d'optimisation : petits détails non structurants via normal maps ou decals plutôt que géométrie excessive.
 
 ## Mission 3 — PBR, lookdev, Godot 4
@@ -49,5 +53,5 @@
 - Rendu neutre **et** éclairage contextuel. Le rendu doit rester convaincant sans post-traitement extrême.
 - Import GLB dans Godot 4, contrôle de la hiérarchie, matériaux, dimensions, collisions, ombres et performance **si Godot accessible**.
 - Captures issues du modèle réel, distinctes des images IA conceptuelles.
-- Comparer côte à côte la référence approuvée et le rendu final à hauteur de joueur, en signalant les différences de caméra/lumière et les trois écarts visuels dominants.
+- Comparer côte à côte la référence approuvée et le rendu final à hauteur de joueur, en signalant les différences de caméra/lumière et les trois écarts visuels dominants. Ajouter une vue sous éclairage neutre : le contraste et le bloom ne doivent pas masquer un manque de géométrie ou de matériaux. Vérifier K01–K04 selon la répartition approuvée, sans attendre d'un kit seul les détails réservés aux suivants.
 - Licences et origines documentées pour les ressources tierces.
