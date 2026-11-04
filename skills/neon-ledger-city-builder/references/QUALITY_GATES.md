@@ -1,4 +1,4 @@
-# Quality Gates — V0.3
+# Quality Gates — V0.4
 
 **Principe :** une phase ne passe pas simplement parce qu'un script est vert ou que quelques modèles sont placés. Les décisions esthétiques restent humaines. Les preuves d'exécution doivent être vérifiables.
 
@@ -8,7 +8,7 @@
 | 1 Masterplan | JSON cohérent, SVG réellement présenté, géométrie/flux/raccordements contrôlés **ET revue indépendante de morphologie urbaine et séquences TPP** | APPROUVER_MASTERPLAN |
 | 2 Greybox | Emprises mesurées dans la scène chargée, caméra TPP, collisions/parcours réels testés | APPROUVER_GREYBOX |
 | 3A Intention | Style guide, références commentées, sous-zones, usages et hero views identifiés | Intégré au gate DA/Assets |
-| 3B Asset-fit | Matrice de besoins/fonctions, fit géométrique et artistique, `FIT/ADAPT/REJECT/MISSING/PLACEHOLDER`, sources et licences traçables | APPROUVER_DA_ASSETS uniquement si couverture acceptable |
+| 3B Asset-fit | Matrice de besoins/fonctions, fit géométrique et artistique, `FIT/ADAPT/REJECT/MISSING/PLACEHOLDER`, sources et licences traçables | APPROUVER_DA_ASSETS seulement si 100 % des essentiels du périmètre approuvé ont des ressources prêtes et vérifiées |
 | 4 Habillage | Toutes les sous-zones essentielles traitées, pas de substitutions non approuvées, captures avant/après, problèmes suivis, navigation/performance, zones gelées intactes | APPROUVER_HABILLAGE |
 | 5 Gel | Approbation phase 4 explicite, registre/diff/rapports alignés | Passage `locked` |
 
@@ -33,6 +33,18 @@ Le gate examine d'abord **le plan 2D** et ses parcours pressentis. Il ne certifi
 - **MINOR** : variation secondaire, détail matériel, désalignement local sans enjeu d'accès, petit défaut de salissure ou d'ambiance.
 
 Un `BLOCKER` empêche la demande de validation finale. Un `MAJOR` doit être résolu ou présenté au client comme **exception explicite à accepter**; cette exception ne vaut pas « rendu conforme aux références ». Une `MINOR` peut être suivie dans la liste de finition.
+
+## Asset Coverage Gate — 100 % obligatoire en V0.4
+
+**Gate dur : `APPROUVER_DA_ASSETS` interdit tant que le registre contient un seul besoin essentiel non prêt.** La découverte de candidats ou des briefs de création **ne suffit pas**; ces éléments sont des solutions proposées, pas des modèles obtenus et contrôlés. Le seuil doit être **N/N** sur le périmètre approuvé (pour Faubourg des Traverses : **50/50**, tant que le référentiel de 50 besoins n'est pas explicitement révisé par l'utilisateur).
+
+- `N/N solutions identifiées` et `N/N ressources prêtes` sont des métriques différentes. Les ressources doivent avoir un statut `READY` prouvé et une classification `FIT` ou `ADAPT` **réalisée**. Une recherche, un lien, un brief, un téléchargement non vérifié ou un placeholder sont exclus.
+- Compter par **ID de besoin essentiel unique**. Conserver tous les IDs initiaux dans le registre; aucune suppression/déclassement silencieux. Un asset peut satisfaire plusieurs besoins **si et seulement si** l'adéquation à chacun est démontrée.
+- En cas de manque, l'agent effectue les recherches possibles, crée des mini-briefs pour les créations et **demande des autorisations d'acquisition/création spécifiques**, sans avancer en Phase 4. Reprendre la phase 3 après accord, puis revérifier jusqu'à N/N.
+- Si impossible (outils indisponibles, licence inconnue, création refusée), livrer `BLOCKED` et les solutions/choix nécessaires, pas un bilan « phase 3 prête ».
+- Un livrable partiel peut être étudié **uniquement avec modification humaine explicite du périmètre**, qui doit conserver un backlog visible des besoins écartés. Ne jamais appeler 15/50 « 100 % du quartier » en requalifiant implicitement 35 besoins.
+
+Voir `references/ASSET_COVERAGE_100.md` et `templates/asset-coverage-register.md`.
 
 ## Asset Coverage Gate (obligatoire avant Phase 4)
 
