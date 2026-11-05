@@ -4,6 +4,12 @@
 
 Accélérer les petites modifications de matériaux, textures, éclairage ou détails sans supprimer la sécurité des fichiers ni la fidélité aux références. **Un changement mineur ne doit pas déclencher une nouvelle chaîne complète de sourcing, audits UV, rapports et validations.** Réutiliser les bancs et les preuves existants si leurs dépendances sont inchangées.
 
+## Routage prioritaire V1.5
+
+**Le mode doit être choisi à l'entrée du SKILL.md avant toute lecture ou tâche lourde.** Une petite retouche sur asset/DA et licences approuvés en FAST ne déclenche pas le sourcing, la phase concept, la matrice complète, un nouveau banc ou une mise à jour Notion à chaque micro-correction. Lire seulement les références touchées et conserver les preuves dont les dépendances sont inchangées.
+
+La production du nouveau lookdev de façade/kit est STANDARD jusqu'à premier témoin convaincant; les petites itérations de paramètres sur ce témoin passent en FAST. La livraison finale en jeu est FULL.
+
 ## Choisir le mode d'après le risque réel, pas selon la taille du prompt
 
 | Mode | Déclencheurs | Minimum attendu |
@@ -53,6 +59,15 @@ Réutiliser une preuve précédente **uniquement** si les fichiers/paramètres d
 La documentation, les CREDITS/Notion et les audits complets sont actualisés à la **clôture de l'asset ou de la phase de production**, ou immédiatement si une nouvelle source/licence exige d'être tracée; pas de fiche/galerie Notion par micro-itération. Ne pas prétendre avoir synchronisé sans autorisation et preuve.
 
 Le résultat FAST ou STANDARD n'est **pas ART_READY automatiquement**; la revue finale FULL reste nécessaire. Une capture concept IA ne remplace jamais une capture du vrai modèle.
+
+## Boucle de convergence V1.5
+
+1. Comparer le rendu réel avec le contrat visuel et classer le principal écart selon **MACRO / MOYEN / MICRO / STRUCTURE / LUMIÈRE**.
+2. Pour une façade trop propre, agir en priorité sur couverture/intensité à l'échelle de l'image, pas sur les seules normales ni petites fixations.
+3. Itérer plusieurs fois **en interne sur le même banc**, sans nouveaux rapports et validations pour chaque micro-essai; archiver seulement le résultat pertinent et les sources reproductibles.
+4. Si deux approches raisonnables n'apportent pas d'amélioration visible, changer de technique (textures, masques, decals, projection, calibrage) plutôt que forcer le même réglage. Ne pas inventer de satisfaction humaine.
+5. Si le besoin de la prochaine correction sort du périmètre approuvé ou exige une licence/ressource externe, demander **seulement cette décision**.
+6. Réaliser un seul bilan court sur le résultat consolidé; gates FULL et synchronisation documentaire au jalon final.
 
 ## Exemples pratiques
 
