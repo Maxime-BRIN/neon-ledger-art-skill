@@ -3,9 +3,9 @@ name: neon-ledger-environment
 description: Skill de direction artistique, sourcing, adaptation et production d'assets 3D pour Neon Ledger OU un autre projet dont la DA est explicitement fournie. Modes FAST/STANDARD/FULL, concept, Blender, PBR et Godot 4.
 ---
 
-# Environment Production Skill — V1.5
+# Environment Production Skill — V1.6
 
-**Objectif :** produire vite un rendu fidèle à la DA approuvée et techniquement exploitable, sans multiplier les validations, scripts, rapports ou matériaux redondants. La fidélité **artistique** n'est pas garantie par la seule conformité métrique.
+**Objectif :** produire vite un rendu fidèle à la DA approuvée et techniquement exploitable, sans multiplier les validations, scripts, rapports ou matériaux redondants. Choisir le **chemin de production le moins coûteux** qui conserve cette qualité. La fidélité **artistique** n'est pas garantie par la seule conformité métrique.
 
 ## 1. ROUTER AVANT de lire le reste
 
@@ -20,6 +20,12 @@ description: Skill de direction artistique, sourcing, adaptation et production d
 | Identité du projet ou DA inconnue | `DA_ROUTING.md` | **Demander**, ne pas inventer de DA ni imposer Neon Ledger à un autre projet |
 
 Si une opération FAST découvre un shader coûteux, UV modifiés ou de nouveaux risques, **escalader uniquement les contrôles touchés** à STANDARD. Une modification de zone protégée reste interdite sans accord, quel que soit le mode.
+
+## Décision de fabrication : chercher le bon raccourci
+
+Pour une **nouvelle production**, consulter `references/PRODUCTION_EFFICIENCY.md` si le choix des outils/sources/variantes n'est pas déjà tranché. Priorité : (1) ressource interne validée, (2) réemploi ou adaptation d'asset avec licence prouvée, y compris catalogue BlenderKit/Blendkit si accès disponible, (3) modules paramétriques, (4) création sur mesure. **Ne jamais ouvrir Blender pour une simple adaptation Godot si elle suffit.**
+
+Après validation d'un **témoin artistique représentatif**, produire par petites familles réutilisables, pas un asset entièrement neuf par bâtiment. Réutiliser une même commande d'export/import/capture et un cache des tests si ces outils **existent réellement dans le projet**; le Skill n'est pas l'implémentation de ces scripts. Ne pas lancer un chantier d'outillage démesuré à la place d'une retouche FAST.
 
 ## 2. Direction artistique et références
 
