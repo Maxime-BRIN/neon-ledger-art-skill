@@ -1,4 +1,8 @@
-# Trois missions, une seule à la fois
+# Trois missions — contrôles proportionnés et autonomie V1.4
+
+## Routage des modes V1.4
+
+Avant de commencer, lire `ITERATION_MODES.md`. Choisir FAST, STANDARD ou FULL suivant les dépendances réellement modifiées. Réutiliser les preuves toujours valides, les scènes/caméras et les sources déjà autorisées. Après concept approuvé et autorisation de production, missions 2–3 peuvent s'enchaîner **sans interruptions humaines internes** dans le périmètre autorisé; soumettre le livrable final à revue. Ne jamais transformer une retouche FAST en nouvel audit complet sauf anomalie détectée.
 
 ## Étape 0 — Sourcer avant de créer (obligatoire pour les assets 3D)
 - Appliquer `ASSET_SOURCING.md` : projet + Notion → sources gratuites → inspection et licence → décision RÉUTILISER, ADAPTER ou CRÉER.
@@ -43,14 +47,14 @@ Lire `VISUAL_FIDELITY.md` et remplir `../templates/visual-fidelity-matrix.md` lo
 - Conserver les choix d'optimisation : petits détails non structurants via normal maps ou decals plutôt que géométrie excessive.
 
 ## Mission 3 — PBR, lookdev, Godot 4
-- Pour les assets réutilisés/adaptés, inspecter matériaux, textures, dépendances et licence avant import ; ne pas imposer un retexturing complet si les PBR existants sont conformes.
+- Pour les assets réutilisés/adaptés, inspecter matériaux, textures, dépendances et licence avant import **si nouvelles sources ou preuves absentes**; réutiliser les preuves antérieures encore valides. Ne pas imposer un retexturing complet si les PBR existants sont conformes.
 - Matériaux adaptés à la zone : BaseColor sRGB, Normal, Roughness, Metallic, AO si pertinent, Emission si nécessaire.
-- UV et texel density vérifiés ; tileables, trim sheets, decals ou atlas selon le coût réel.
+- UV et texel density vérifiés lors de leur création/modification ou du gate final; **ne pas refaire l'audit UV entier pour un simple changement de roughness sur UV inchangés**. Tileables, trim sheets, decals ou atlas selon le coût réel.
 - Chaque surface visible reçoit un matériau PBR crédible, avec textures lorsque nécessaires ; les exceptions (matières uniformes ou shaders procéduraux justifiés) sont documentées. Éviter les simples couleurs plates sur surfaces riches.
 - Dégradations causales (eau, friction, chaleur, corrosion, entretien) ; ne pas salir automatiquement les zones aisées ou les objets neufs.
 - Passe de vieillissement **localisé** : coulures sous rebords, climatiseurs et évacuations ; rouille aux fixations ; crasse aux pieds des murs ; tags sur surfaces accessibles. Éviter le bruit uniformément réparti.
 - Vérifier le dressing visible dans la référence : plantes, props, textiles, enseignes, graffitis abstraits/illisibles par défaut (aucun texte ni marque fictive non validés).
-- Rendu neutre **et** éclairage contextuel. Le rendu doit rester convaincant sans post-traitement extrême.
+- Rendu neutre **et** éclairage contextuel pour le gate final FULL; en FAST choisir seulement la ou les vues utiles au défaut corrigé. Le rendu doit rester convaincant sans post-traitement extrême.
 - Import GLB dans Godot 4, contrôle de la hiérarchie, matériaux, dimensions, collisions, ombres et performance **si Godot accessible**.
 - Captures issues du modèle réel, distinctes des images IA conceptuelles.
 - Comparer côte à côte la référence approuvée et le rendu final à hauteur de joueur, en signalant les différences de caméra/lumière et les trois écarts visuels dominants. Ajouter une vue sous éclairage neutre : le contraste et le bloom ne doivent pas masquer un manque de géométrie ou de matériaux. Vérifier K01–K04 selon la répartition approuvée, sans attendre d'un kit seul les détails réservés aux suivants.
