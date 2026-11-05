@@ -23,10 +23,12 @@ Lire `VISUAL_FIDELITY.md` et remplir `../templates/visual-fidelity-matrix.md` lo
 - En cas de référence textuelle, expliciter les propriétés contrôlables (silhouette, dimensions, matériaux, assemblages, fixations, détails visibles, usage, usure, distance caméra), marquer les hypothèses et soumettre la version enrichie à approbation avant toute modélisation.
 - Construire un brief **court** : objet, fonction, marqueurs de silhouette, matières, ambiance, composition et limites de fabrication.
 - Pour la voie CRÉER, créer **un concept principal** si outil image disponible ; selon l'asset : hero shot, vue produit ou cadrage environnement. Ne pas imposer une vue d'immeuble à un petit prop.
-- Pour Neon Ledger sans concept pertinent déjà approuvé : **produire un concept de base du nouvel asset en style cyberpunk Neon Ledger** si l'outil image est accessible, sans recopier d'éléments spécifiques d'une autre œuvre. Pour un autre projet, appliquer sa DA explicitée sans contamination cyberpunk; si absente, demander avant toute création.\n- Produire 3 choix visuels forts, 3 contraintes de réalisation et les 3 défauts majeurs.
+- Pour Neon Ledger sans concept pertinent déjà approuvé : **produire un concept de base du nouvel asset en style cyberpunk Neon Ledger** si l'outil image est accessible, sans recopier d'éléments spécifiques d'une autre œuvre. Pour un autre projet, appliquer sa DA explicitée sans contamination cyberpunk; si absente, demander avant toute création.
+- Produire 3 choix visuels forts, 3 contraintes de réalisation et les 3 défauts majeurs.
 - Sur retour négatif : préserver les acquis et corriger les 3 plus gros défauts ; pas de régénération massive automatique.
 - Après approbation, produire si nécessaire orthographies, gros plans, variantes et dimensions de référence.
-- Ne jamais confondre concept, plan à l'échelle et mesh.\n- **Gate art :** vérifier que le concept exprime réellement les marqueurs forts de DA demandés, pas simplement le bâti générique avec quelques accents lumineux; détailler les familles visibles à produire et celles qui relèvent d'un autre kit/phase.
+- Ne jamais confondre concept, plan à l'échelle et mesh.
+- **Gate art :** vérifier que le concept exprime réellement les marqueurs forts de DA demandés, pas simplement le bâti générique avec quelques accents lumineux; détailler les familles visibles à produire et celles qui relèvent d'un autre kit/phase.
 
 ## Lookdev témoin dès le début (V1.5)
 
@@ -49,7 +51,8 @@ Pour une adaptation de matériau sur mesh existant, sauter concept et modélisat
 - Tout élément important et lisible à **5–15 m** doit avoir une silhouette reconnaissable. Un carton n'est pas un cube brut, un sac poubelle n'est pas une boîte, un linge n'est pas un simple plan rectangulaire ; adapter le niveau de complexité à sa taille à l'écran.
 - Pour les textiles visibles : drapé crédible, attaches/fil/pinces quand discernables et épaisseur apparente si nécessaire ; les textures de tissu relèvent de la phase 3.
 - Pour les équipements : supports et connexions crédibles, pas de câbles/tuyaux flottants.
-- Produire une capture du véritable assemblage 3D à angle proche du concept, ainsi qu'un rendu clay; évaluer profondeur, variation et densité perceptible de détails, par façade. Une ossature cohérente mais très pauvre en détail reste `GEOMETRY_PASS / VISUAL_INCOMPLETE` si les familles majeures du périmètre de cette phase sont absentes.\n- Une primitive de blockout reste autorisée **uniquement si explicitement marquée provisoire** dans l'inventaire et le rapport ; elle interdit de présenter l'asset correspondant comme final.
+- Produire une capture du véritable assemblage 3D à angle proche du concept, ainsi qu'un rendu clay; évaluer profondeur, variation et densité perceptible de détails, par façade. Une ossature cohérente mais très pauvre en détail reste `GEOMETRY_PASS / VISUAL_INCOMPLETE` si les familles majeures du périmètre de cette phase sont absentes.
+- Une primitive de blockout reste autorisée **uniquement si explicitement marquée provisoire** dans l'inventaire et le rapport ; elle interdit de présenter l'asset correspondant comme final.
 - Conserver les choix d'optimisation : petits détails non structurants via normal maps ou decals plutôt que géométrie excessive.
 
 ## Mission 3 — PBR, lookdev, Godot 4
