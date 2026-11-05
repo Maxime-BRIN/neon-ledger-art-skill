@@ -7,13 +7,16 @@ description: Direction artistique et production 3D cohérente avec Neon Ledger p
 
 Objectif : produire des visuels distinctifs et des assets techniquement exploitables, **sans uniformiser les quartiers ni confondre rendu séduisant et asset validé**.
 
-## Charger seulement le nécessaire
-1. Identifier le projet et lire `references/DA_ROUTING.md` ; lire `references/NEON_LEDGER_ART_BIBLE.md` **uniquement si Neon Ledger est confirmé**.
-2. Si Neon Ledger est confirmé, lire `references/ZONES.md` pour la zone demandée, si un profil existe; sinon consulter la DA du projet externe.
-3. Lire `references/PHASES.md` uniquement pour la phase actuelle.
-4. Pour toute demande de création, d'adaptation ou de sélection d'un asset 3D, lire d'abord `references/ASSET_SOURCING.md` ; rechercher avant de créer.
-5. Pour une étape de validation, lire `references/QUALITY_GATES.md`, `references/VISUAL_FIDELITY.md` et les règles proportionnées de `references/ITERATION_MODES.md`.
-6. Utiliser les modèles de `templates/` si le brief ou le rapport est absent.
+## Démarrage V1.5 — routeur minimal, avant tout audit
+
+1. **Identifier le projet et le type d'opération** (nouvelle création / adaptation / retouche sur asset approuvé / livraison) à partir du dépôt et du brief. Si projet inconnu, demander. Lire `references/DA_ROUTING.md` seulement pour une DA à déterminer / un nouveau projet; ne pas imposer Neon Ledger ailleurs.
+2. **Choisir FAST / STANDARD / FULL avant de charger les étapes** — lire `references/ITERATION_MODES.md`. Une correction d'un matériau approuvé FAST **saute sourcing, concept, nouvel inventaire et synchronisation Notion**; réutiliser sources et validations inchangées. Ne pas charger tous les fichiers pour une micro-itération.
+3. **DA** : pour Neon Ledger confirmé, lire la DA de zone dans `references/ZONES.md`, la bible globale et les références approuvées si nécessaires; pour un autre projet, seulement sa DA; **sans DA externe, demander, ne pas inventer**.
+4. **Nouveau modèle** : lire `references/ASSET_SOURCING.md` puis `references/PHASES.md` pour l'étape pertinente. Concept image si création et absence de référence approuvée et outil disponible; demander validation avant Blender.
+5. **Matériaux / weathering** : charger `references/WEATHERING.md` et `references/MATERIAL_PIPELINE.md` lorsque nécessaires; **qualité macro à 5–15 m avant microdétails**. Consulter `references/VISUAL_FIDELITY.md` et `references/QUALITY_GATES.md` seulement pour les contrôles réellement applicables.
+6. **Livraison** : contrôles finaux du mode FULL, validation humaine, catalogue Notion si asset livré; pas une fiche Notion par correction de roughness. Utiliser les templates existants sans nouveaux rapports redondants.
+
+**Règle de convergence :** l'état de finition requis est une **cible initiale**, pas une patine minimale qu'on augmente sur dix itérations. Dès le témoin, reproduire l'intensité de la référence approuvée; si une forte négligence paraît propre à distance de jeu, reprendre les grandes masses visuelles en interne.
 
 ## Routage de direction artistique selon le projet — V1.3 (obligatoire)
 
@@ -37,7 +40,7 @@ Identifier : **type d'asset, zone, usage gameplay, échelle/dimensions, distance
 - Corriger les **3 défauts majeurs** plutôt que réécrire tout le prompt.
 
 ## Recherche et réutilisation avant génération — étape 0 obligatoire
-Pour tout asset 3D, appliquer `references/ASSET_SOURCING.md` **avant** le routage des images : (1) rechercher les assets déjà présents dans le projet et le catalogue Notion, (2) chercher des modèles externes gratuits réellement téléchargeables, (3) vérifier l'adéquation artistique/technique **et la licence de la fiche précise**, (4) comparer réutilisation, adaptation et création.
+Pour tout **nouvel asset 3D ou adaptation non encore évaluée**, appliquer `references/ASSET_SOURCING.md` **avant** le routage des images : (1) rechercher les assets déjà présents dans le projet et le catalogue Notion, (2) chercher des modèles externes gratuits réellement téléchargeables, (3) vérifier l'adéquation artistique/technique **et la licence de la fiche précise**, (4) comparer réutilisation, adaptation et création.
 - Un asset déjà adapté et exploitable est à **réutiliser**, pas à recréer. Un asset proche est à **adapter**, si l'effort est raisonnable ; sinon proposer la création.
 - Prioriser la qualité finale, le coût d'intégration et la traçabilité ; « gratuit », « CC0 » ou « libre de droits » ne se déduisent pas d'un site entier. Vérifier le droit d'usage commercial, de modification, les attributions et les restrictions de redistribution pour l'asset concerné. Sans preuve, ne pas annoncer « licence vérifiée » et ne pas incorporer le fichier.
 - Pour un lot, garder une liste courte de candidats par asset, sans téléchargement massif ni doublons. Respecter l'accord de l'utilisateur avant toute acquisition/import qui écrit dans le projet.
@@ -75,7 +78,7 @@ Pour tout asset 3D, appliquer `references/ASSET_SOURCING.md` **avant** le routag
 
 ## Modes d'itération FAST / STANDARD / FULL — V1.4
 
-Lire `references/ITERATION_MODES.md` à l'entrée de la mission et **choisir le niveau de contrôle selon le risque réel** :
+Après sélection du mode dès le routeur V1.5, appliquer `references/ITERATION_MODES.md` et **choisir le niveau de contrôle selon le risque réel** :
 
 - **FAST :** correction locale de matériau, roughness, texture, lumière ou decal avec géométrie et UV inchangés; réutiliser banc/provenance/licences/audits antérieurs, produire 1 vue A/B pertinente (vue neutre si utile), contrôle runtime ciblé et bilan concis. **Pas de nouvel audit complet, de neuf captures, de recherche externe ou de validation entre micro-itérations par défaut.**
 - **STANDARD :** nouveau module/façade, changement UV/mesh local, shader ou texture avec impact mémoire significatif; contrôles sélectifs des éléments modifiés, quelques captures, performance ciblée si pertinente.
