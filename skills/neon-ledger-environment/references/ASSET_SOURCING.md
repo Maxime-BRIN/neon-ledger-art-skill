@@ -3,9 +3,13 @@
 ## Objectif et ordre obligatoire
 Éviter de reconstruire des objets 3D courants déjà disponibles. Cette étape précède le routage des images et les trois missions artistiques ; elle s'applique aux props, infrastructures, kits et autres modèles 3D. Les images IA restent pertinentes **uniquement si la création originale a été choisie**, ou sur demande expresse de concept art. Ne jamais inventer un résultat de recherche.
 
+## Choisir le coût total le plus bas (V1.6)
+
+Lire `PRODUCTION_EFFICIENCY.md` pour arbitrer entre **import direct Godot**, adaptation Blender, variation de matériaux, module existant et création originale. Ne pas créer une étape de sourcing pour une retouche FAST sur asset approuvé. **BlenderKit/Blendkit est une source candidate, pas une installation automatique** : vérifier accès, licence propre à l'asset, conditions de redistribution et format avant tout téléchargement. Limiter la recherche initiale aux candidats véritablement utiles.
+
 ## Procédure concise
 1. **Interne** : rechercher par nom, synonymes, famille et usage dans les dossiers du projet, les fichiers validés, la documentation et la BDD Notion « ⛩️ Assets Neon Ledger » si accessibles. Vérifier variantes existantes, statut et absence de doublon.
-2. **Externe** : chercher 1 à 3 candidats pertinents sur des catalogues d'assets, en priorité les bibliothèques à licence permissive (Poly Haven, Kenney, Quaternius), puis d'autres catalogues (Fab, Sketchfab, etc.) avec contrôle **par asset**. Vérifier que le téléchargement et l'usage commercial sont permis ; ne pas confondre page de résultats, aperçu et fichier 3D accessible.
+2. **Externe** : chercher 1 à 3 candidats pertinents sur des catalogues d'assets, en priorité les bibliothèques à licence permissive (BlenderKit/Blendkit (catalogue gratuit ou payant selon asset), Poly Haven, Kenney, Quaternius), puis d'autres catalogues (Fab, Sketchfab, etc.) avec contrôle **par asset**. Vérifier que le téléchargement et l'usage commercial sont permis ; ne pas confondre page de résultats, aperçu et fichier 3D accessible.
 3. **Vérification individuelle** : relever URL directe de la fiche, auteur, licence exacte et preuve consultable, attribution, modifications, redistribution, dépendances de textures, formats, dimensions, polycount si connu, qualité PBR, proportions, compatibilité Godot (testée ou non), et éventuel coût d'adaptation.
 4. **Décision** : comparer RÉUTILISER (asset conforme), ADAPTER (asset proche et amélioration limitée), CRÉER (aucun candidat satisfaisant, licence incompatible, adaptation plus coûteuse ou identité artistique spécifique). Ne pas utiliser la création comme option par défaut.
 5. **Présentation** : recommander une voie en deux à cinq lignes par asset avec liens et limites ; obtenir l'accord requis avant les écritures dans le projet. Ne télécharger qu'après choix, sans aspirer massivement des packs.
