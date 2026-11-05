@@ -24,6 +24,12 @@ Remplir `templates/visual-fidelity-matrix.md` avec les colonnes : ID de référe
 
 Une ligne peut renvoyer à un kit ultérieur **avec autorisation explicite de report**; elle n'est pas marquée produite. Les concepts proposés, images IA et éléments sourcés non vérifiés ne valent pas `VERIFIED`.
 
+## Contrat de fidélité à la distance d'usage (V1.5)
+
+Pour le vieillissement, renseigner `maintenance_state`, `coverage`, `intensity`, `view_distance` et `clean_exceptions` d'après les références **déjà approuvées**. Une saleté massive et stratifiée peut être appropriée; « causal » ne veut pas dire quelques coulures discrètes. Les grandes masses de teinte, pollution et réparations doivent se lire **à 5–15 m**, avant de peaufiner les normales, la roughness et la petite rouille. Lire `WEATHERING.md`.
+
+Si une demande de façade très négligée produit un mur encore propre au premier rendu, ce n'est pas un résultat à présenter comme final : faire une itération **macro** interne sur le même banc avant le rendu utilisateur. Après plusieurs essais sans amélioration, changer de méthode plutôt que seulement multiplier le nombre de petites taches.
+
 ## 3. Comparaisons obligatoires
 
 À la fin de chaque phase utile, produire :
