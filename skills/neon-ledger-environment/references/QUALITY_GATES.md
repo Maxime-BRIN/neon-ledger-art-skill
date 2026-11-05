@@ -10,6 +10,19 @@ Lire `ITERATION_MODES.md` et enregistrer le mode choisi. Les gates ci-dessous so
 - **Autonomie :** concept et périmètre de production explicitement approuvés permettent plusieurs corrections/missions internes sans nouvelle sollicitation; l'accord reste obligatoire pour toute modification canonique, transfert/acquisition non autorisés, élargissement du périmètre, changement de DA et livraison finale.
 - Le gate de fidélité artistique reste impératif à la **livraison**, mais un FAST réussi ne clôture pas des éléments majeurs simplement différés.
 
+## Gate rapide de convergence artistique V1.5
+
+Avant de livrer le résultat de la mission, même en FAST, vérifier sur la capture réelle :
+
+- La cible d'entretien est-elle lisible **immédiatement à distance TPP** et sous éclairage neutre si le matériau est l'enjeu ?
+- L'intensité et la couverture approuvées sont-elles perceptibles, ou a-t-on réintroduit une patine minime par défaut ?
+- Les grandes masses de salissure et les couches d'entretien dominent-elles le look lorsque le brief exige de la négligence importante ?
+- Les matériaux sont-ils physiquement distincts (plâtre, acier peint, oxyde, pollution) et les défauts artificiels évités ?
+- Le delta est-il significatif par rapport à la base, sans perte de fonctions, de forme ou de budget ?
+- En l'absence de progrès, réessayer en interne ou signaler **une méthode bloquée**, sans s'arrêter simplement sur « encore trop propre ».
+
+La comparaison ne garantit jamais `ART_READY` sans revue finale humaine. Préserver les exceptions de surfaces entretenues; ne pas saturer mécaniquement tous les éléments.
+
 ## Règle commune
 La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables. **L'accord explicite** est requis au concept et à la livraison finale, et entre missions seulement en mode supervisé; le mode autonome ne franchit jamais un changement de périmètre non approuvé.
 
