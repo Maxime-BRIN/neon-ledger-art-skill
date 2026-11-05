@@ -59,3 +59,11 @@ Ce dépôt contient des instructions, **pas** un générateur automatique d'asse
 - **City Builder** : décide où répartir les états d'entretien, Environment produit les variantes, sans lancement automatique.
 
 Fichiers détaillés : `skills/neon-ledger-environment/references/WEATHERING.md`, `MATERIAL_PIPELINE.md`, `ITERATION_MODES.md` et `ZONES.md`.
+
+## Environment V1.6 — sourcing et fabrication plus efficaces (5 novembre 2026)
+
+- Routeur de production **réemploi → adaptation / import direct Godot → assemblage modulaire → création**, selon qualité artistique et coût total.
+- **BlenderKit/Blendkit** intégré comme catalogue candidat de modèles et de matériaux, **sans téléchargement automatique ni licence présumée**.
+- Petits lots d'assets cohérents, témoin de lookdev avant variantes, variations déterministes et respect des plans validés.
+- Guide `skills/neon-ledger-environment/references/PRODUCTION_EFFICIENCY.md` : stratégie de pipeline unique, cache de validation, assembleur de façades, mesure du gain et critères d'arrêt.
+- Aucun script du pipeline de jeu, plugin externe ou fichier Godot n'a été installé par cette modification du Skill. La mise en place doit être testée dans le workspace du jeu.
