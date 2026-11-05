@@ -64,4 +64,4 @@ Une façade finale doit réunir les couches nécessaires, mais **on ne bloque pa
 - `NOT_TESTED` : preuves Godot / Blender ou référence absentes.
 - `BLOCKED` : conflit avec un contrat approuvé, absence d'autorisation, usage illicite ou impossibilité de respecter un impératif.
 
-Après chaque itération, corriger les trois écarts dominants, refaire captures comparables, puis soumettre à approbation humaine. Aucune création massive sans accord.
+**Mode V1.4 :** sur une petite correction FAST, corriger les écarts utiles, réutiliser la matrice existante, capturer une vue A/B réelle et actualiser uniquement les lignes modifiées; **ne pas exiger une revue humaine à chaque micro-itération**. En mode STANDARD, contrôler les composants modifiés. En mode FULL (livraison / ART_READY), comparer l'ensemble des vues majeures et demander validation humaine. Les droits d'acquisition et les protections restent inchangés. Voir `ITERATION_MODES.md`. Aucune création massive hors périmètre autorisé.
