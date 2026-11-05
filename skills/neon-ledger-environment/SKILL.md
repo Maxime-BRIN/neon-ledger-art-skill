@@ -12,7 +12,7 @@ Objectif : produire des visuels distinctifs et des assets techniquement exploita
 2. Si Neon Ledger est confirmé, lire `references/ZONES.md` pour la zone demandée, si un profil existe; sinon consulter la DA du projet externe.
 3. Lire `references/PHASES.md` uniquement pour la phase actuelle.
 4. Pour toute demande de création, d'adaptation ou de sélection d'un asset 3D, lire d'abord `references/ASSET_SOURCING.md` ; rechercher avant de créer.
-5. Pour une étape de validation, lire `references/QUALITY_GATES.md` et `references/VISUAL_FIDELITY.md`.
+5. Pour une étape de validation, lire `references/QUALITY_GATES.md`, `references/VISUAL_FIDELITY.md` et les règles proportionnées de `references/ITERATION_MODES.md`.
 6. Utiliser les modèles de `templates/` si le brief ou le rapport est absent.
 
 ## Routage de direction artistique selon le projet — V1.3 (obligatoire)
@@ -72,12 +72,24 @@ Pour tout asset 3D, appliquer `references/ASSET_SOURCING.md` **avant** le routag
 5. **Construction mesurée et performante.** Les images de concept ne sont **pas** des plans cotés : positions, ouvertures, emprises, 1,50 m de passage, clearance, hauteurs, saillies et toitures restent gouvernés par le JSON/contrat technique. Les ajouts hors enveloppe doivent être classés `INCOMPATIBLE` et soumis à arbitrage; jamais placés par défaut. Géométrie réelle pour relief/silhouette/ombre; trim sheets, normal maps, decals et éclairage pour microdétail, avec budgets mesurés.
 6. **Gate sans faux succès :** un asset peut être `GEOMETRY_PASS / VISUAL_INCOMPLETE` : autoriser les tests d'intégration isolés, mais **pas** `ART_READY` ou validation finale tant que les écarts majeurs de sa **portée approuvée** restent ouverts. Un kit architectural K01 peut être accepté comme base sans que la façade enrichie K01+K02+K03+K04 soit déclarée terminée.
 
+## Modes d'itération FAST / STANDARD / FULL — V1.4
+
+Lire `references/ITERATION_MODES.md` à l'entrée de la mission et **choisir le niveau de contrôle selon le risque réel** :
+
+- **FAST :** correction locale de matériau, roughness, texture, lumière ou decal avec géométrie et UV inchangés; réutiliser banc/provenance/licences/audits antérieurs, produire 1 vue A/B pertinente (vue neutre si utile), contrôle runtime ciblé et bilan concis. **Pas de nouvel audit complet, de neuf captures, de recherche externe ou de validation entre micro-itérations par défaut.**
+- **STANDARD :** nouveau module/façade, changement UV/mesh local, shader ou texture avec impact mémoire significatif; contrôles sélectifs des éléments modifiés, quelques captures, performance ciblée si pertinente.
+- **FULL :** livraison `ART_READY`, intégration définitive dans le quartier, zone complète, modification du canon ou risque élevé; appliquer tous les quality gates pertinents et demander validation humaine.
+
+**Production autonome après approbation du concept et autorisation explicite du périmètre :** les missions Blender, PBR, tests Godot et corrections itératives s'enchaînent sans validation humaine à chaque petite étape. La validation humaine demeure obligatoire pour concept initial et livrable final, ainsi que changement de DA, extension du périmètre, modification de zones protégées, acquisition/source externe soumise à permission ou conflit majeur. Mode supervisé disponible sur demande.
+
+Ne jamais confondre **moins d'interruptions** et **moins de qualité** : les preuves obsolètes sont invalidées sélectivement, non réutilisées sans contrôle. Conserver les résultats dans les fichiers existants; ne pas fabriquer un nouveau rapport pour chaque modification.
+
 ## Production par jalons
 - Étape 0 : diagnostic réutiliser / adapter / créer et vérification de licence ; aucune génération d'image inutile.
 - Phase 1 : concept et spécification visuelle **pour la création originale** ; en réutilisation/adaptation, revue et approbation de la source et des modifications prévues ; **aucun faux modèle 3D**.
 - Phase 2 : modélisation 3D, UV, pivots, unités, modules éventuels, collisions éventuelles ; produire des preuves réellement rendues.
 - Phase 3 : matériaux PBR, vieillissement motivé, éclairage, export, contrôles Godot 4.
-- **Validation explicite requise** avant de passer à la phase suivante.
+- **Validation explicite requise** pour le concept initial et la livraison finale; en mode supervisé, également entre missions. En mode autonome expressément autorisé par le périmètre de production, les missions 2 et 3 et leurs itérations internes s'enchaînent sans interrompre l'utilisateur. Voir `references/ITERATION_MODES.md`.
 - Avant d'écrire dans un projet existant : lire `AGENTS.md`, `CLAUDE.md` et les contraintes du dépôt ; ne pas modifier silencieusement les zones validées.
 - Ne pas prétendre avoir exécuté Blender, ouvert Godot, produit une image, inspecté un fichier ou testé des FPS sans preuve.
 - Distinguer **créé / exécuté / vérifié / non vérifié / bloqué**.
@@ -86,7 +98,7 @@ Pour tout asset 3D, appliquer `references/ASSET_SOURCING.md` **avant** le routag
 Indiquer asset + zone + phase + hypothèses importantes. Livrer les fichiers, les preuves et un statut : PASS, BLOCKED ou NEEDS_USER_APPROVAL. Ne produire un long audit que si une anomalie le justifie.
 
 ## Étape finale obligatoire — Image et catalogue Notion
-À la clôture de **chaque production d'asset** (concept approuvé, prototype ou asset final), suivre `references/NOTION_ASSET_CATALOG.md`.
+À la clôture de **chaque jalon d'asset livré à l'utilisateur** (concept approuvé, prototype livré ou asset final), **et non pour chaque micro-itération FAST/STD**, suivre `references/NOTION_ASSET_CATALOG.md`.
 1. Produire ou sélectionner **une vraie image représentative de l'asset** ; privilégier un rendu du mesh réel dès qu'il existe. Ne pas présenter un concept IA comme une capture 3D.
 2. Créer ou **mettre à jour sans doublon** la fiche de cet asset dans la base officielle Notion « ⛩️ Assets Neon Ledger ».
 3. Renseigner les champs disponibles, notamment `Nom`, `Catégorie`, `Type`, `Usage`, `Chemin projet`, `Lien`, `Auteur`, `Statut`, `Contrôle technique`, `Décision / remarques` et les informations de licence vérifiables.
