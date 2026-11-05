@@ -18,6 +18,10 @@ Jeu cyberpunk urbain à la troisième personne, fondé sur une **ville crédible
 6. **Cohérence de production** : échelle métrique, matériaux physiquement plausibles, performance mesurable dans Godot.
 7. **Singularité** : un motif visuel fort propre à chaque zone ou famille d'assets ; éviter le cyberpunk générique.
 
+### Variété des états de maintenance
+
+Les sous-espaces, bâtiments, façades et équipements d'une même zone peuvent avoir **des états de maintenance différents**, d'après usages, exposition, âge et histoire sociale. Pour Faubourg des Traverses, les deux états B18 approuvés servent d'étalons de qualité matière, pas de modèles uniformes à dupliquer. Un commerce actif peut être mieux entretenu que le mur support, et les matériaux anciens fortement encrassés sans que toutes les textures ni tous les quartiers soient délabrés.
+
 ### Variables par zone et par asset
 - Richesse et état d'entretien
 - Architecture, époque et densité
