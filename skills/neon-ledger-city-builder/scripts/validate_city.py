@@ -180,10 +180,15 @@ def validate_registry(path):
     registry = load(path)
     errors, warnings = [], []
     base = pathlib.Path(path).resolve().parent
-    district_ids = [d.get("id") for d in registry.get("districts", [])]
+    districts = registry.get("districts", [])
+    # Schema 1.x: districts[].id + top-level zones[]; schema 2.0: districts[].district_id + nested zones[].
+    district_ids = [d.get("id", d.get("district_id")) for d in districts]
     if len(district_ids) != len(set(district_ids)):
         fail(errors, "registry", "duplicate district IDs")
-    zone_entries = registry.get("zones", [])
+    zone_entries = list(registry.get("zones", []))
+    for d in districts:
+        for z in d.get("zones", []):
+            zone_entries.append({**z, "id": z.get("id", z.get("zone_id")), "district_id": z.get("district_id", d.get("district_id", d.get("id"))), "masterplan": z.get("masterplan", z.get("masterplan_path", ""))})
     ids = [z.get("id") for z in zone_entries]
     if len(ids) != len(set(ids)):
         fail(errors, "registry", "duplicate zone IDs")
@@ -241,6 +246,13 @@ def main():
         print("Usage: validate_city.py <city_master_index.json | zone_masterplan.json>")
         return 2
     path = pathlib.Path(sys.argv[1])
+    # A project with its own tools/validate_city.py (e.g. polygon footprints) is the authority: delegate to it.
+    for parent in path.resolve().parents:
+        project_tool = parent / "tools" / "validate_city.py"
+        if project_tool.is_file() and project_tool.resolve() != pathlib.Path(__file__).resolve():
+            import subprocess
+            print(f"Delegating to project validator {project_tool}")
+            return subprocess.run([sys.executable, str(project_tool), str(path)], cwd=parent).returncode
     try:
         data = load(path)
         errors, warnings = validate_zone(data) if "zone_id" in data else validate_registry(path)
