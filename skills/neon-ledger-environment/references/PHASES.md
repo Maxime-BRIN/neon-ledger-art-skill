@@ -4,7 +4,7 @@
 
 Avant de commencer, lire `ITERATION_MODES.md`. Choisir FAST, STANDARD ou FULL suivant les dépendances réellement modifiées. Réutiliser les preuves toujours valides, les scènes/caméras et les sources déjà autorisées. Après concept approuvé et autorisation de production, missions 2–3 peuvent s'enchaîner **sans interruptions humaines internes** dans le périmètre autorisé; soumettre le livrable final à revue. Ne jamais transformer une retouche FAST en nouvel audit complet sauf anomalie détectée.
 
-## Étape 0 — Sourcer avant de créer (obligatoire pour les assets 3D)
+## Étape 0 — Sourcer avant une nouvelle création ou adaptation (FAST sur asset approuvé exempté)
 - Appliquer `ASSET_SOURCING.md` : projet + Notion → sources gratuites → inspection et licence → décision RÉUTILISER, ADAPTER ou CRÉER.
 - Si RÉUTILISER : présenter la source, son usage prévu, sa licence prouvée et les vérifications à effectuer ; pas de concept IA ni de remodélisation inutiles.
 - Si ADAPTER : proposer un brief d'adaptation limité (meshes, matériaux, proportions, optimisation), avec preuve de droits de modification ; approuver ce brief avant les modifications.
@@ -27,6 +27,12 @@ Lire `VISUAL_FIDELITY.md` et remplir `../templates/visual-fidelity-matrix.md` lo
 - Sur retour négatif : préserver les acquis et corriger les 3 plus gros défauts ; pas de régénération massive automatique.
 - Après approbation, produire si nécessaire orthographies, gros plans, variantes et dimensions de référence.
 - Ne jamais confondre concept, plan à l'échelle et mesh.\n- **Gate art :** vérifier que le concept exprime réellement les marqueurs forts de DA demandés, pas simplement le bâti générique avec quelques accents lumineux; détailler les familles visibles à produire et celles qui relèvent d'un autre kit/phase.
+
+## Lookdev témoin dès le début (V1.5)
+
+Pour un bâtiment/kit nouveau : avant de multiplier les modules, construire **un témoin simple représentatif avec les matériaux de niveau final** et comparer dans Godot à la référence approuvée, à distance TPP et sous une lumière pertinente. Valider le caractère (entretien, couverture, intensité) sur ce témoin, puis étendre les modules. Cela évite 70 composants parfaitement modélisés mais trop propres. Les contraintes métriques font autorité; ne pas contourner d'emprises pour reproduire une image artistique.
+
+Pour une adaptation de matériau sur mesh existant, sauter concept et modélisation si approuvés/unchanged; suivre FAST ou STANDARD et `WEATHERING.md` et `MATERIAL_PIPELINE.md`. L'objectif est un rendu visiblement satisfaisant à distance, pas une accumulation de normal maps.
 
 ## Mission 2 — Géométrie 3D Blender
 - Pour une adaptation approuvée, conserver autant que possible les géométries correctes et travailler uniquement sur les changements nécessaires ; ne pas refaire le modèle de zéro sans raison documentée.
@@ -52,7 +58,7 @@ Lire `VISUAL_FIDELITY.md` et remplir `../templates/visual-fidelity-matrix.md` lo
 - UV et texel density vérifiés lors de leur création/modification ou du gate final; **ne pas refaire l'audit UV entier pour un simple changement de roughness sur UV inchangés**. Tileables, trim sheets, decals ou atlas selon le coût réel.
 - Chaque surface visible reçoit un matériau PBR crédible, avec textures lorsque nécessaires ; les exceptions (matières uniformes ou shaders procéduraux justifiés) sont documentées. Éviter les simples couleurs plates sur surfaces riches.
 - Dégradations causales (eau, friction, chaleur, corrosion, entretien) ; ne pas salir automatiquement les zones aisées ou les objets neufs.
-- Passe de vieillissement **localisé** : coulures sous rebords, climatiseurs et évacuations ; rouille aux fixations ; crasse aux pieds des murs ; tags sur surfaces accessibles. Éviter le bruit uniformément réparti.
+- Passe de vieillissement **selon le contrat d'entretien approuvé** : ponctuel, étendu ou dominant. **« Non uniforme » n'implique pas « peu sale »**. Façade longtemps négligée = pollution et humidité dominantes possibles; conserver causes, couches, zones plus récentes et réponses par matière. Lire `WEATHERING.md` et agir **macro → moyen → micro**.
 - Vérifier le dressing visible dans la référence : plantes, props, textiles, enseignes, graffitis abstraits/illisibles par défaut (aucun texte ni marque fictive non validés).
 - Rendu neutre **et** éclairage contextuel pour le gate final FULL; en FAST choisir seulement la ou les vues utiles au défaut corrigé. Le rendu doit rester convaincant sans post-traitement extrême.
 - Import GLB dans Godot 4, contrôle de la hiérarchie, matériaux, dimensions, collisions, ombres et performance **si Godot accessible**.
