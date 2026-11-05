@@ -1,4 +1,4 @@
-# Trois missions — contrôles proportionnés et autonomie V1.4
+# Trois missions — contrôles proportionnés et autonomie V1.6
 
 ## Routage des modes V1.4
 
@@ -35,6 +35,12 @@ Lire `VISUAL_FIDELITY.md` et remplir `../templates/visual-fidelity-matrix.md` lo
 Pour un bâtiment/kit nouveau : avant de multiplier les modules, construire **un témoin simple représentatif avec les matériaux de niveau final** et comparer dans Godot à la référence approuvée, à distance TPP et sous une lumière pertinente. Valider le caractère (entretien, couverture, intensité) sur ce témoin, puis étendre les modules. Cela évite 70 composants parfaitement modélisés mais trop propres. Les contraintes métriques font autorité; ne pas contourner d'emprises pour reproduire une image artistique.
 
 Pour une adaptation de matériau sur mesh existant, sauter concept et modélisation si approuvés/unchanged; suivre FAST ou STANDARD et `WEATHERING.md` et `MATERIAL_PIPELINE.md`. L'objectif est un rendu visiblement satisfaisant à distance, pas une accumulation de normal maps.
+
+## Production par familles et assemblage modulaire (V1.6)
+
+Lire `PRODUCTION_EFFICIENCY.md` si la mission implique plusieurs assets ou façades. Après un témoin visuellement validé, mutualiser textures, modules, accessoires et matériaux; décliner des variantes utiles plutôt que construire chaque bâtiment indépendamment. Les assemblages paramétriques suivent le JSON canonique et les limites approuvées, **sans répétition automatique du même habillage partout**.
+
+Préférer Godot seul pour une petite adaptation de prop/matière déjà compatible; Blender reste pertinent pour maillages, UV, rig, baking ou transformations géométriques. Chercher des assets externes seulement lorsque la création/adaptation le justifie, avec licences et autorisations exactes.
 
 ## Mission 2 — Géométrie 3D Blender
 - Pour une adaptation approuvée, conserver autant que possible les géométries correctes et travailler uniquement sur les changements nécessaires ; ne pas refaire le modèle de zéro sans raison documentée.
