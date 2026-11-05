@@ -48,3 +48,14 @@ Autre exemple :
 - `examples/requests.md` : exemples.
 
 Ce dépôt contient des instructions, **pas** un générateur automatique d'assets 3D. Les licences des ressources externes sont à documenter individuellement.
+
+## Environment V1.5 — production artistique accélérée (5 novembre 2026)
+
+- **FAST / STANDARD / FULL à l'entrée** du Skill : contrôles proportionnés, banc réutilisé, pas de sourcing/Notion par micro-retouche.
+- **Lookdev représentatif tôt** : une baie avec les matériaux de qualité finale avant la multiplication des modules.
+- **Weathering selon DA** : vieillissement ponctuel, étendu ou dominant, grande échelle d'abord; aucune saleté universelle.
+- **Faubourg des Traverses** : deux références de qualité matière approuvées (usé entretenu / négligé fortement dégradé), à relier aux vraies sources Godot locales. `REFERENCE_ONLY` tant que les presets ne sont pas vérifiés dans le workspace.
+- **B19** : protocole de test de transfert dans `skills/neon-ledger-environment/references/B19_TRANSFER_TEST.md` ; pas de test Blender/Godot local prétendu.
+- **City Builder** : décide où répartir les états d'entretien, Environment produit les variantes, sans lancement automatique.
+
+Fichiers détaillés : `skills/neon-ledger-environment/references/WEATHERING.md`, `MATERIAL_PIPELINE.md`, `ITERATION_MODES.md` et `ZONES.md`.
