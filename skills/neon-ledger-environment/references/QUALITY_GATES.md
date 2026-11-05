@@ -1,7 +1,17 @@
 # Quality gates — GO / NO-GO (Visual Fidelity V1.2)
 
+## Proportionnalité V1.4
+
+Lire `ITERATION_MODES.md` et enregistrer le mode choisi. Les gates ci-dessous sont **complets au jalon final FULL**; en FAST/STANDARD, ne relancer que les contrôles touchés ou invalidés. Des preuves précédentes pertinentes et toujours valides sont réutilisables. `NOT_TESTED` ne devient jamais `PASS` par héritage.
+
+- **FAST :** 1 vue A/B réelle et contrôle runtime ciblé, source/géométrie inchangées vérifiées simplement, résumé bref. Ne pas recréer matrice de référence, 9 rendus, audit de licences de sources inchangées, mesure VRAM ou audit UV complet par défaut.
+- **STANDARD :** changements locaux structurels/UV/shaders coûteux, tests ciblés, captures pertinentes et métriques liées aux risques.
+- **FULL :** livraison `ART_READY`, publication/intégration, zone/kit final : preuves détaillées, performance et acceptation humaine.
+- **Autonomie :** concept et périmètre de production explicitement approuvés permettent plusieurs corrections/missions internes sans nouvelle sollicitation; l'accord reste obligatoire pour toute modification canonique, transfert/acquisition non autorisés, élargissement du périmètre, changement de DA et livraison finale.
+- Le gate de fidélité artistique reste impératif à la **livraison**, mais un FAST réussi ne clôture pas des éléments majeurs simplement différés.
+
 ## Règle commune
-La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables, et **l'accord explicite de l'utilisateur** avant tout passage de phase.
+La note auto-attribuée n'est pas une preuve. Il faut des livrables inspectables. **L'accord explicite** est requis au concept et à la livraison finale, et entre missions seulement en mode supervisé; le mode autonome ne franchit jamais un changement de périmètre non approuvé.
 
 ## Gate 0 — Décision sourcer / adapter / créer
 - Preuve de recherche interne (fichiers du projet, catalogue Notion quand accessible) et externe lorsque les outils le permettent ; ne pas annoncer une recherche non exécutée.
@@ -60,7 +70,7 @@ Lire `VISUAL_FIDELITY.md` et présenter la matrice `../templates/visual-fidelity
 - UV, normales, pivots, alignements contrôlés
 - Collisions adaptées au gameplay ; jointures testées si modularité
 - Rendu clay issu du modèle ; export GLB inspecté
-- **Approbation utilisateur** pour texturing final
+- **Approbation utilisateur** pour texturing final en mode supervisé; en mode autonome autorisé, gate technique interne avant poursuite sans interrompre l'utilisateur
 
 ### Gate 3 — PBR / Godot
 - Textures PBR réellement présentes, raccordées et correctement interprétées
