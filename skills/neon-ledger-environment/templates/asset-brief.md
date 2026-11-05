@@ -13,6 +13,9 @@
 - Références validées :
 - Marqueur de silhouette distinctif :
 - Matériaux dominants :
+- Contrat maintenance (si pertinent) : état, couverture ponctuelle/étendue/dominante, intensité, distance de jeu, exceptions propres ; **hériter de la zone / référence validée avant de demander**
+- Preset/référence réellement disponible : ID, chemin et statut REFERENCE_ONLY / SOURCE_VERIFIED / GODOT_WITNESS_VERIFIED / PRODUCTION_READY
+- Profil d'identité : façades/commerce/réseaux/entretien et différences fonctionnelles attendues
 - Contraintes techniques :
 - Phase demandée : 1 / 2 / 3
 - Hypothèses à valider :
