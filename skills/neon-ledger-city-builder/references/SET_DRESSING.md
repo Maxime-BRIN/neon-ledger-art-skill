@@ -8,6 +8,17 @@ L'habillage n'est pas « poser les assets disponibles ». Il est la traduction d
 
 Les captures montrent quelques façades HLM fonctionnelles (fenêtres, climatiseurs, câbles) mais une composition majoritairement inachevée : grands pignons aveugles, chaussées et cour sans usages, lumière uniforme et faible, éléments provisoires visibles, silhouette répétitive. Les références visent une hiérarchie de niveaux de détail et des lieux habités : fronts commerciaux, seuils, toitures, canalisations, auvents, signalétique, éclairages orientés, points de vie et traces d'entretien. Ce **n'est pas** une exigence de copie exacte des références, ni un ordre de couvrir chaque mètre de néons, de déchets ou de mobilier. Un HLM résidentiel ne doit pas automatiquement devenir un marché commercial.
 
+## Coordination de l'entretien urbain avec Environment V1.5
+
+**City Builder détermine le POURQUOI et le OÙ ; Environment détermine le COMMENT.**
+
+- Pour Faubourg des Traverses, l'utilisateur a approuvé deux familles de matière sur B18 : entretien partiel/usure visible et négligence dominante. Elles servent d'étalons de rendu, **pas de deux textures à recopier**.
+- Proposer une distribution par **sous-zone, bâtiment, façade et usage** : boulevard et devantures actives souvent plus entretenus, arrières techniques/cours/services souvent plus dégradés selon leur histoire réelle. **Pas de quota automatique ni d'affectation au hasard**; soumettre les décisions de composition à l'utilisateur au gate artistique applicable.
+- Une même construction peut juxtaposer façade commerciale entretenue, étage résidentiel usé et réseaux très corrodés. Éviter les transitions sans cause.
+- Transmettre au Skill `neon-ledger-environment` les IDs d'emplacements, références approuvées et contrat d'entretien (`state/coverage/intensity/distance/exceptions`); ne jamais lancer automatiquement ce Skill ni produire sa matière à sa place.
+- Protéger emprises, passages et zones gelées. Les presets Godot du banc ne sont pas présumés optimisés pour le quartier; intégration/LOD/performance en contexte restent à tester.
+- **Aucune généralisation aux 31 bâtiments sans validation du pilote et des ressources prêtes**, et sans accord de l'utilisateur.
+
 ## Phase 3A — Références et objectifs observables
 
 Avant d'ouvrir l'outil de placement :
