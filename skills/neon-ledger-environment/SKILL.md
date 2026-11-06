@@ -3,7 +3,7 @@ name: neon-ledger-environment
 description: Skill de direction artistique, sourcing, adaptation et production d'assets 3D pour Neon Ledger OU un autre projet dont la DA est explicitement fournie. Modes FAST/STANDARD/FULL, concept, Blender, PBR et Godot 4.
 ---
 
-# Environment Production Skill — V1.6
+# Environment Production Skill — V1.7
 
 **Objectif :** produire vite un rendu fidèle à la DA approuvée et techniquement exploitable, sans multiplier les validations, scripts, rapports ou matériaux redondants. Choisir le **chemin de production le moins coûteux** qui conserve cette qualité. La fidélité **artistique** n'est pas garantie par la seule conformité métrique.
 
@@ -37,6 +37,7 @@ Après validation d'un **témoin artistique représentatif**, produire par petit
 
 ## 3. Obtenir le bon rendu tôt
 
+- **Plancher de qualité (V1.7) :** même sans concept dédié, tout asset ou kit modulaire atteint le niveau de l'asset de référence du projet (B18 pour Neon Ledger) : PBR par surface, géométrie réelle, usure fine. Aplats, boîtes à quelques triangles ou « prêt » fondé sur licence + import + cotes = `VISUAL_INCOMPLETE`. Lire `references/QUALITY_BASELINE.md`; valider un témoin avant de décliner.
 - Pour un nouvel ensemble architectural, réaliser **une baie / un module témoin** avec matériaux et éclairage représentatifs *avant* la multiplication de dizaines de modules.
 - Fixer un **contrat visuel court** depuis la référence approuvée : `maintenance_state`, `coverage` (ponctuelle/étendue/dominante), `intensity`, distance TPP et exceptions mieux entretenues. Hériter des décisions déjà consignées plutôt que reposer les mêmes questions.
 - Appliquer `references/WEATHERING.md` : **macro → moyen → micro**. Une dégradation dominante doit être évidente à 5–15 m; « saleté causale » ne veut pas dire patine timide. Les zones neuves/aisées restent propres si leur DA le demande.
