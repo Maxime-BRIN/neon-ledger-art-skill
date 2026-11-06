@@ -81,3 +81,9 @@ Dans la phase de révision :
 ## Livrables de phase 1
 
 Le dossier doit comprendre : le JSON canonique et sa version, le SVG ouvert/lien vérifié, la liste des emprises et accès, les vérifications techniques, la revue morphologique, les arbitrages ouverts, et la demande **explicite** d'approbation humaine. Seule une validation humaine autorise la phase 2.
+
+## SVG : outil et orientation
+
+- Utiliser le script de rendu **du projet** (`tools/render_masterplan_svg.py`) quand il existe : celui de ce skill (`scripts/render_masterplan_svg.py`) suit le schéma d'exemple et peut échouer (`KeyError: 'segments'`) sur le schéma 2.0 d'un projet. Ne jamais lancer `git checkout` sur un SVG pour « tester » : il peut contenir du travail non commité.
+- Orienter les SVG dans le sens de la **vue de dessus du moteur** (Godot : X vers la droite, +Z vers le bas, flèche du nord en conséquence). Un plan en miroir est pris pour une erreur de la scène.
+- Après tout retrait ou ajout d'objet, régénérer le SVG de zone et la carte globale depuis le JSON, et vérifier qu'aucun identifiant retiré n'y figure.

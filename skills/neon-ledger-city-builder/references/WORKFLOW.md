@@ -35,3 +35,11 @@ Après approbation explicite de phase 4, consigner l'empreinte du masterplan, l'
 - À la reprise : identifier le dernier jalon approuvé et les changements intervenus depuis; signaler les changements hors bande.
 - Autorisation de franchir une phase ≠ autorisation de télécharger des assets, d'écrire dans Notion, de créer une branche Git ou de modifier une zone protégée.
 - Ne pas inventer d'images, de screenshots ou de résultats de test.
+
+## Cas : refonte d'une zone déjà approuvée (V2 → V3)
+
+1. Obtenir l'autorisation explicite et locale de modifier la zone ; fixer ce qui reste imposé (raccords, coordonnées des connecteurs).
+2. Archiver l'ancienne version dans `versions/<v>/` (masterplan, scène, tests propres à cette version) ; ne rien supprimer.
+3. Déplacer les tests spécifiques à l'ancienne géométrie ; adapter ceux qui dépendent de la scène (nombre de bâtiments, chemins de nœuds).
+4. Rejouer les phases 0 à 2 avec leurs jalons ; recorriger le registre (`status`) seulement après chaque approbation.
+5. Une demande de retrait ou de déplacement d'un objet après approbation (par exemple un bâtiment isolé) est notée dans `decisions.md` avec la date, et les SVG, captures et compteurs de tests sont régénérés.
