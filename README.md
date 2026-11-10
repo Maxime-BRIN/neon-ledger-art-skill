@@ -8,6 +8,7 @@ Ce dépôt regroupe les Skills spécialisés du projet **Neon Ledger** pour Clau
 | --- | --- | --- |
 | **neon-ledger-environment** | [skills/neon-ledger-environment](skills/neon-ledger-environment/) | Conception et production d'assets 3D avec contrôle de la DA, Blender et intégration Godot |
 | **neon-ledger-city-builder** | [skills/neon-ledger-city-builder](skills/neon-ledger-city-builder/) | Cadrage urbain, masterplans JSON/SVG, extensions, greybox, habillage, protections et contrôles |
+| **neon-ledger-urban-fabric** | [skills/neon-ledger-urban-fabric](skills/neon-ledger-urban-fabric/) | Tissu urbain dense et bâtiments voxel orientés : jamais de façade en escalier, seuils de densité vérifiables |
 
 ## Installation
 
