@@ -75,6 +75,7 @@ L'agent peut travailler, vérifier et corriger **à l'intérieur de la phase aut
 - Maintenir `data/city/city_master_index.json`, avec un **ID immuable** pour chaque district et chaque zone, un nom lisible, une origine globale, dimensions, état, chemin de masterplan et profil DA. Ne jamais recycler un ID supprimé.
 - Une extension reçoit un nouvel ID, un nom, un lien explicite vers les zones adjacentes et des connecteurs X/Z mesurés et testés; la même procédure de phases 0–5 s'applique.
 - Avant de créer, rechercher chevauchements, coutures entre zones, évolution des routes, horizon visuel, continuité de styles et transitions raisonnables. Les transitions ne signifient pas uniformiser les quartiers.
+- **Partir de l'existant** : avant toute esquisse d'une zone adjacente, inventaire chiffré de l'existant (tracés, gabarits, dos de façades, ruelles, ouvrages, décors de fond, lignes de vue), puis prolongement des tracés, frange de transition à l'échelle existante, raccords multiples et décision proposée pour chaque décor caduc. Règles et contrôles obligatoires : `references/EXTENSIONS.md` § Intégration à l'existant. Un plan qui échoue ces contrôles n'est pas présenté comme candidat.
 - Une zone approuvée est **read-only par défaut**, y compris ses fichiers, géométries, scènes et connexions; se référer à `references/PROTECTION.md`.
 
 ## Godot et habillage

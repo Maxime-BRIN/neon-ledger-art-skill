@@ -3,7 +3,7 @@ name: neon-ledger-urban-fabric
 description: "Règles de tissu urbain dense et de bâtiments voxel orientés pour Neon Ledger (Godot 4). Utiliser dès qu'on compose, densifie, génère ou contrôle les îlots et emprises bâties d'un quartier (masterplan, générateur procédural, greybox voxel), en particulier quand des rues ne sont pas alignées sur la grille du monde. Interdit les façades en escalier dues à la rastérisation d'emprises tournées et fixe des seuils de densité vérifiables. Complète neon-ledger-city-builder sans le remplacer."
 ---
 
-# Neon Ledger — Urban Fabric (V0.2)
+# Neon Ledger — Urban Fabric (V0.3)
 
 Ce skill fixe **comment le bâti remplit un quartier** : densité, alignement sur la rue, orientation des volumes. Le **workflow, les jalons humains et la protection des zones** restent ceux de `neon-ledger-city-builder` : lire son `SKILL.md` d'abord. Ici, rien ne dispense d'une validation de masterplan.
 
@@ -42,6 +42,10 @@ Un îlot se découpe en **parcelles étroites et profondes** perpendiculaires à
 - Chaque parcelle est rattachée à **une** rue ; son repère suit cette rue. À un angle entre deux rues non parallèles, le bâtiment d'angle est un L dont chaque aile suit sa rue, ou un rectangle sur la rue principale avec un pan coupé.
 - Le vide triangulaire qui reste au cœur d'un îlot en biais devient une cour nommée, jamais un escalier de voxels.
 - Aucune emprise transformée ne déborde sur la chaussée, le trottoir ou une emprise voisine (test de recouvrement en polygones, pas en cellules).
+
+## Règle 4 — La densité se compose depuis l'existant
+
+Les seuils de la Règle 2 ne se remplissent jamais dans un rectangle libre. La première bande bâtie reprend l'orientation, les parcelles et les gabarits de la rue existante. Le tissu dense et les biais viennent ensuite. Voir `neon-ledger-city-builder` → `references/EXTENSIONS.md` § Intégration à l'existant.
 
 ## Livrables
 
