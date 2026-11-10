@@ -45,7 +45,7 @@ Un îlot se découpe en **parcelles étroites et profondes** perpendiculaires à
 
 ## Livrables
 
-- **TOUJOURS** : SVG vue de dessus + SVG vue de côté + dénivelé affiché (cotes aux nœuds, pentes %, profil du sol), même pour une étude intermédiaire (règle de `neon-ledger-city-builder`).
+- **TOUJOURS** : SVG vue de dessus + SVG vue de côté + dénivelé affiché (cotes aux nœuds, pentes %, profil du sol) + SVG de contexte avec la ville existante (repère monde), même pour une étude intermédiaire (règle de `neon-ledger-city-builder`).
 - Masterplan (JSON + SVG via city-builder) montrant **les parcelles et leur repère**, avec le tableau de densité de la Règle 2 rempli par îlot.
 - Test automatique : Règle 1 (emprise locale + angle), recouvrements, et chaque seuil chiffré de la Règle 2.
 - En greybox : captures à hauteur de joueur dans une rue en biais, prouvant des façades planes.
