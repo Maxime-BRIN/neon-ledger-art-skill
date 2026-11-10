@@ -3,7 +3,7 @@ name: neon-ledger-urban-fabric
 description: "Règles de tissu urbain dense et de bâtiments voxel orientés pour Neon Ledger (Godot 4). Utiliser dès qu'on compose, densifie, génère ou contrôle les îlots et emprises bâties d'un quartier (masterplan, générateur procédural, greybox voxel), en particulier quand des rues ne sont pas alignées sur la grille du monde. Interdit les façades en escalier dues à la rastérisation d'emprises tournées et fixe des seuils de densité vérifiables. Complète neon-ledger-city-builder sans le remplacer."
 ---
 
-# Neon Ledger — Urban Fabric (V0.1)
+# Neon Ledger — Urban Fabric (V0.2)
 
 Ce skill fixe **comment le bâti remplit un quartier** : densité, alignement sur la rue, orientation des volumes. Le **workflow, les jalons humains et la protection des zones** restent ceux de `neon-ledger-city-builder` : lire son `SKILL.md` d'abord. Ici, rien ne dispense d'une validation de masterplan.
 
@@ -45,6 +45,7 @@ Un îlot se découpe en **parcelles étroites et profondes** perpendiculaires à
 
 ## Livrables
 
+- **TOUJOURS** : SVG vue de dessus + SVG vue de côté + dénivelé affiché (cotes aux nœuds, pentes %, profil du sol), même pour une étude intermédiaire (règle de `neon-ledger-city-builder`).
 - Masterplan (JSON + SVG via city-builder) montrant **les parcelles et leur repère**, avec le tableau de densité de la Règle 2 rempli par îlot.
 - Test automatique : Règle 1 (emprise locale + angle), recouvrements, et chaque seuil chiffré de la Règle 2.
 - En greybox : captures à hauteur de joueur dans une rue en biais, prouvant des façades planes.

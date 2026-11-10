@@ -64,6 +64,7 @@ L'agent peut travailler, vérifier et corriger **à l'intérieur de la phase aut
 ## Source de vérité et visualisation
 
 - Un masterplan `zone_masterplan.json` contient les coordonnées **métriques locales X/Z**, origine mondiale X/Z, Y vertical dans Godot, gabarits, voies, points de raccord et parcours.
+- **Trois vues TOUJOURS, à chaque présentation de plan (exigence utilisateur du 2026-11-10)** : (1) **SVG vue de dessus**, (2) **SVG vue de côté** (coupe(s) le long du parcours principal, échelle verticale indiquée, sol + bâtiments + hauteurs), (3) **dénivelé affiché** : cote d'altitude à chaque nœud de rue et pente en % par tronçon sur la vue de dessus, profil du sol sur la coupe. Aucun plan, même intermédiaire ou d'étude, n'est présenté sans les trois.
 - Le SVG est une **vue de contrôle**, obligatoirement générée depuis le **même JSON** (script `scripts/render_masterplan_svg.py`). Il doit rester compréhensible : nord, échelle, limites, routes, IDs, emprises, hauteurs, repères, légende et, si besoin, vues partielles. Toute modification demandée sur le SVG se traduit d'abord en modification JSON, puis en régénération.
 - Une donnée « emprise réservée » n'est pas une « emprise bâtie » : définir séparément `reserved_footprint` et `built_footprint`. Les retraits n'autorisent pas l'occupation des circulations.
 - Ne pas déclarer « mathématiquement garanti » sans validation numérique et contrôle de la scène Godot réelle. Le SVG et la scène ne doivent pas être deux réalisations artistiques indépendantes.
